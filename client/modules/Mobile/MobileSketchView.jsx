@@ -26,7 +26,7 @@ const MobileSketchView = () => {
   const htmlFile = useSelector(state => getHTMLFile(state.files));
   const projectName = useSelector(state => state.project.name);
   const selectedFile = useSelector(state => state.files.find(file => file.isSelectedFile) ||
-    state.files.find(file => file.name === 'sketch.js') ||
+    state.files.find(file => file.name === 'sketch.py') ||
     state.files.find(file => file.name !== 'root'));
 
   const {

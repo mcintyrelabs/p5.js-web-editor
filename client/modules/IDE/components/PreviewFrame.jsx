@@ -424,7 +424,7 @@ function mapStateToProps(state, ownProps) {
     htmlFile: getHTMLFile(state.files),
     content:
       (state.files.find(file => file.isSelectedFile) ||
-      state.files.find(file => file.name === 'sketch.js') ||
+      state.files.find(file => file.name === 'sketch.py') ||
       state.files.find(file => file.name !== 'root')).content,
     isPlaying: state.ide.isPlaying,
     isAccessibleOutputPlaying: state.ide.isAccessibleOutputPlaying,

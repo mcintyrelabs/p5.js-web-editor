@@ -9,7 +9,7 @@ const { Schema } = mongoose;
 
 const fileSchema = new Schema(
   {
-    name: { type: String, default: 'sketch.js' },
+    name: { type: String, default: 'sketch.py' },
     content: { type: String, default: '' },
     url: { type: String },
     children: { type: [String], default: [] },
