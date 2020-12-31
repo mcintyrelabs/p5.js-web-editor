@@ -2,9 +2,12 @@ $base-font-size: 12;
 
 //colors
 $p5js-pink: #ed225d;
+$computiful-blue: #1E90FF;
 $p5js-pink-opacity: #ed225d80;
+$computiful-blue-opacity: #155697;
 $processing-blue: #007BBB;
 $p5js-active-pink: #f10046;
+$computiful-active-blue: #1E1EFF;
 $white: #fff;
 $black: #000;
 $yellow: #F5DC23;
@@ -14,6 +17,7 @@ $lightsteelblue: #B0C4DE;
 $dodgerblue: #1E90FF;
 // $icon-hover-color: #333;
 $p5-contrast-pink: #FFA9D9;
+$computiful-contrast-blue: #1EFFFF;
 
 $border-color: #B5B5B5;
 $outline-color: #0F9DD7;
@@ -37,7 +41,7 @@ $darkest: #000;
 
 $themes: (
   light: (
-    logo-color: $p5js-pink,
+    logo-color: $computiful-blue,
     logo-background-color: $lightest,
     heavy-text-color: $darker,
     primary-text-color: $dark,
@@ -52,8 +56,8 @@ $themes: (
     button-border-color: $middle-light,
     toolbar-button-color: $dark,
     toolbar-button-background-color: $medium-light,
-    button-background-hover-color: $p5js-pink,
-    button-background-active-color: $p5js-active-pink,
+    button-background-hover-color: $computiful-blue,
+    button-background-active-color: $computiful-active-blue,
     button-nav-inactive-color: $middle-gray,
     button-hover-color: $lightest,
     button-active-color: $lightest,
@@ -85,26 +89,26 @@ $themes: (
     search-hover-text-color: $lightest,
     search-hover-background-color: $medium-dark,
     keyboard-shortcut-color: $middle-gray,
-    nav-hover-color: $p5js-pink,
+    nav-hover-color: $computiful-blue,
     nav-border-color: $middle-light,
-    error-color: $p5js-pink,
+    error-color: $computiful-blue,
     table-row-stripe-color: $medium-light,
     table-row-stripe-color-alternate: $medium-light,
     codefold-icon-open: url(../images/triangle-arrow-down.svg?byUrl),
     codefold-icon-closed: url(../images/triangle-arrow-right.svg?byUrl),
 
     primary-button-color: $lightest,
-    primary-button-background-color: $p5js-pink,
+    primary-button-background-color: $computiful-blue,
 
     table-button-color: $lightest,
     table-button-background-color: $middle-gray,
     table-button-active-color: $lightest,
     table-button-background-active-color: #00A1D3,
     table-button-hover-color: $lightest,
-    table-button-background-hover-color: $p5js-pink,
+    table-button-background-hover-color: $computiful-blue,
 
     progress-bar-background-color: $middle-gray,
-    progress-bar-active-color: $p5js-active-pink,
+    progress-bar-active-color: $computiful-active-blue,
 
     form-title-color: rgba(51, 51, 51, 0.87),
     form-secondary-title-color: $medium-dark,
@@ -113,7 +117,7 @@ $themes: (
     form-navigation-options-color: $middle-dark
   ),
   dark: (
-    logo-color: $p5js-pink,
+    logo-color: $computiful-blue,
     logo-background-color: $lightest,
     heavy-text-color: $lightest,
     primary-text-color: $lightest,
@@ -129,7 +133,7 @@ $themes: (
     toolbar-button-color: $lightest,
     toolbar-button-background-color: $medium-dark,
     button-background-hover-color: $p5js-pink,
-    button-background-active-color: $p5js-active-pink,
+    button-background-active-color: $computiful-active-blue,
     button-nav-inactive-color: $middle-light,
     button-hover-color: $lightest,
     button-active-color: $lightest,
@@ -159,28 +163,28 @@ $themes: (
     search-background-color: $lightest,
     search-clear-background-color: $medium-dark,
     search-hover-text-color: $lightest,
-    search-hover-background-color: $p5js-pink,
+    search-hover-background-color: $computiful-blue,
     keyboard-shortcut-color: $middle-light,
-    nav-hover-color: $p5js-pink,
+    nav-hover-color: $computiful-blue,
     nav-border-color: $middle-dark,
-    error-color: $p5js-pink,
+    error-color: $computiful-blue,
     table-row-stripe-color: $dark,
     table-row-stripe-color-alternate: $darker,
     codefold-icon-open: url(../images/triangle-arrow-down-white.svg?byUrl),
     codefold-icon-closed: url(../images/triangle-arrow-right-white.svg?byUrl),
 
     primary-button-color: $lightest,
-    primary-button-background-color: $p5js-pink,
+    primary-button-background-color: $computiful-blue,
 
     table-button-color: $lightest,
     table-button-background-color: $middle-gray,
     table-button-active-color: $lightest,
     table-button-background-active-color: #00A1D3,
     table-button-hover-color: $lightest,
-    table-button-background-hover-color: $p5js-pink,
+    table-button-background-hover-color: $computiful-blue,
 
     progress-bar-background-color: $middle-gray,
-    progress-bar-active-color: $p5js-active-pink,
+    progress-bar-active-color: $computiful-active-blue,
 
     form-title-color: $lightest,
     form-secondary-title-color: $medium-light,
@@ -244,7 +248,7 @@ $themes: (
     codefold-icon-closed: url(../images/triangle-arrow-right-white.svg?byUrl),
 
     primary-button-color: $lightest,
-    primary-button-background-color: $p5js-pink,
+    primary-button-background-color: $computiful-blue,
 
     table-button-color: $dark,
     table-button-background-color: $middle-gray,
@@ -254,7 +258,7 @@ $themes: (
     table-button-background-hover-color: $yellow,
 
     progress-bar-background-color: $middle-gray,
-    progress-bar-active-color: $p5js-active-pink,
+    progress-bar-active-color: $computiful-active-blue,
 
     form-title-color: $lightest,
     form-secondary-title-color: $medium-light,

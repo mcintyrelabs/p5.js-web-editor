@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import SquareLogoIcon from '../../../images/p5js-square-logo.svg';
+import SquareLogoIcon from '../../../images/computiful-square-logo.svg';
 // import PlayIcon from '../../../images/play.svg';
-import AsteriskIcon from '../../../images/p5-asterisk.svg';
+import NablaIcon from '../../../images/computiful-nabla.svg';
 
 function About(props) {
   const { t } = useTranslation();
@@ -23,7 +23,7 @@ function About(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AsteriskIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
             {t('About.Examples')}
           </a>
         </p>
@@ -33,7 +33,7 @@ function About(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AsteriskIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
             {t('About.Learn')}
           </a>
         </p>
@@ -46,7 +46,7 @@ function About(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AsteriskIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
             {t('About.Libraries')}
           </a>
         </p>
@@ -56,7 +56,7 @@ function About(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AsteriskIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
             {t('Nav.Help.Reference')}
           </a>
         </p>
@@ -66,7 +66,7 @@ function About(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AsteriskIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
             {t('About.Forum')}
           </a>
         </p>

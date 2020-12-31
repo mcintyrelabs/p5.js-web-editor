@@ -8,8 +8,10 @@ export const Theme = {
 
 export const colors = {
   p5jsPink: '#ed225d',
+  computifulBlue: '#1E90FF',
   processingBlue: '#007BBB',
   p5jsActivePink: '#f10046',
+  computifulActiveBlue: '#1E1EFF',
   white: '#fff',
   black: '#000',
   yellow: '#f5dc23',
@@ -17,7 +19,8 @@ export const colors = {
   red: '#ff0000',
   lightsteelblue: '#B0C4DE',
   dodgerblue: '#1E90FF',
-  p5ContrastPink: ' #FFA9D9',
+  p5ContrastPink: '#FFA9D9',
+  computifulContrastBlue: '#1EFFFF',
 
   borderColor: ' #B5B5B5',
   outlineColor: '#0F9DD7',
@@ -74,13 +77,13 @@ export default {
       },
       hover: {
         foreground: grays.lightest,
-        background: colors.p5jsPink,
-        border: colors.p5jsPink,
+        background: colors.computifulBlue,
+        border: colors.computifulBlue,
       },
       active: {
         foreground: grays.lightest,
-        background: colors.p5jsActivePink,
-        border: colors.p5jsActivePink,
+        background: colors.computifulActiveBlue,
+        border: colors.computifulActiveBlue,
       },
       disabled: {
         foreground: colors.black,
@@ -105,7 +108,7 @@ export default {
     },
     Separator: grays.middleLight,
 
-    TabHighlight: colors.p5jsPink,
+    TabHighlight: colors.computifulBlue,
     SketchList: {
       background: grays.lighter,
       card: {
@@ -127,13 +130,13 @@ export default {
       },
       hover: {
         foreground: grays.lightest,
-        background: colors.p5jsPink,
-        border: colors.p5jsPink,
+        background: colors.computifulBlue,
+        border: colors.computifulBlue,
       },
       active: {
         foreground: grays.lightest,
-        background: colors.p5jsActivePink,
-        border: colors.p5jsActivePink,
+        background: colors.computifulActiveBlue,
+        border: colors.computifulActiveBlue,
       },
       disabled: {
         foreground: grays.light,
@@ -158,7 +161,7 @@ export default {
     },
     Separator: grays.middleDark,
 
-    TabHighlight: colors.p5jsPink,
+    TabHighlight: colors.computifulBlue,
     SketchList: {
       background: grays.darker,
       card: {
@@ -185,8 +188,8 @@ export default {
       },
       active: {
         foreground: grays.dark,
-        background: colors.p5jsActivePink,
-        border: colors.p5jsActivePink,
+        background: colors.computifulActiveBlue,
+        border: colors.computifulActiveBlue,
       },
       disabled: {
         foreground: grays.light,

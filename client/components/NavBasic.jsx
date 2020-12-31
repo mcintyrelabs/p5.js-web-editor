@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-import LogoIcon from '../images/p5js-logo-small.svg';
+import LogoIcon from '../images/computiful-logo-small.svg';
 import ArrowIcon from '../images/triangle-arrow-left.svg';
 
 class NavBasic extends React.PureComponent {

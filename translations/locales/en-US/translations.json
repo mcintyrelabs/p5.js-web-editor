@@ -72,7 +72,7 @@
     "Submit": "Log In"
   },
   "LoginView": {
-    "Title": "p5.js Web Editor | Login",
+    "Title": "Computiful Editor | Login",
     "Login": "Log In",
     "LoginOr": "or",
     "SignUp": "Sign Up",
@@ -90,7 +90,7 @@
   },
   "About": {
     "Title": "About",
-    "TitleHelmet": "p5.js Web Editor | About",
+    "TitleHelmet": "Computiful Editor | About",
     "Contribute": "Contribute",
     "NewP5": "New to p5.js?",
     "Report": "Report a bug",
@@ -261,7 +261,7 @@
     "Submit": "Send Password Reset Email"
   },
   "ResetPasswordView": {
-    "Title": "p5.js Web Editor | Reset Password",
+    "Title": "Computiful Editor | Reset Password",
     "Reset": "Reset Your Password",
     "Submitted": "Your password reset email should arrive shortly. If you don't see it, check\n            in your spam folder as sometimes it can end up there.",
     "Login": "Log In",
@@ -281,7 +281,7 @@
     "errorValidUsername": "Username must only consist of numbers, letters, periods, dashes, and underscores."
   },
   "NewPasswordView": {
-    "Title": "p5.js Web Editor | New Password",
+    "Title": "Computiful Editor | New Password",
     "Description": "Set a New Password",
     "TokenInvalidOrExpired": "The password reset token is invalid or has expired.",
     "EmptyPassword": "Please enter a password",
@@ -304,8 +304,8 @@
   },
   "AccountView": {
     "SocialLogin": "Social Login",
-    "SocialLoginDescription": "Use your GitHub or Google account to log into the p5.js Web Editor.",
-    "Title": "p5.js Web Editor | Account Settings",
+    "SocialLoginDescription": "Use your GitHub or Google account to log into the Computiful Editor.",
+    "Title": "Computiful Editor | Account Settings",
     "Settings": "Account Settings",
     "AccountTab": "Account",
     "AccessTokensTab": "Access Tokens"
@@ -349,14 +349,14 @@
     "SubmitSignup": "Sign Up"
   },
   "SignupView": {
-    "Title": "p5.js Web Editor | Signup",
+    "Title": "Computiful Editor | Signup",
     "Description": "Sign Up",
     "Or": "Or",
     "AlreadyHave": "Already have an account?",
     "Login": "Log In"
   },
   "EmailVerificationView": {
-    "Title": "p5.js Web Editor | Email Verification",
+    "Title": "Computiful Editor | Email Verification",
     "Verify": "Verify your email",
     "InvalidTokenNull": "That link is invalid.",
     "Checking": "Validating token, please wait...",
@@ -364,7 +364,7 @@
     "InvalidState": "Something went wrong."
   },
   "AssetList": {
-    "Title": "p5.js Web Editor | My assets",
+    "Title": "Computiful Editor | My assets",
     "ToggleOpenCloseARIA": "Toggle Open/Close Asset Options",
     "Delete": "Delete",
     "OpenNewTab": "Open in New Tab",
@@ -374,7 +374,7 @@
     "HeaderSketch": "Sketch"
   },
   "Feedback": {
-    "Title": "p5.js Web Editor | Feedback",
+    "Title": "Computiful Editor | Feedback",
     "ViaGithubHeader": "Via Github Issues",
     "ViaGithubDescription": "If you're familiar with Github, this is our preferred method for receiving bug reports and feedback.",
     "GoToGithub": "Go to Github",
@@ -404,7 +404,7 @@
     "LogIn": "log in",
     "SavedDifferentWindow": "The project you have attempted to save has been saved from another window.\n        Please refresh the page to see the latest version.",
     "LinkTitle": "Error Linking Account",
-    "LinkMessage": "There was a problem linking your {{serviceauth}} account to your p5.js Web Editor account. Your {{serviceauth}} account has already been linked to another p5.js Web Editor account."
+    "LinkMessage": "There was a problem linking your {{serviceauth}} account to your Computiful Editor account. Your {{serviceauth}} account has already been linked to another Computiful Editor account."
   },
   "ShareModal": {
     "Embed": "Embed",
@@ -417,8 +417,8 @@
     "TitleDefault": "collection"
   },
   "Collection": {
-    "Title": "p5.js Web Editor | My collections",
-    "AnothersTitle": "p5.js Web Editor | {{anotheruser}}'s collections",
+    "Title": "Computiful Editor | My collections",
+    "AnothersTitle": "Computiful Editor | {{anotheruser}}'s collections",
     "Share": "Share",
     "URLLink": "Link to Collection",
     "AddSketch": "Add Sketch",
@@ -441,12 +441,12 @@
     "ButtonLabelDescendingARIA": "Sort by {{displayName}} descending."
   },
   "AddToCollectionList": {
-    "Title": "p5.js Web Editor | My collections",
-    "AnothersTitle": "p5.js Web Editor | {{anotheruser}}'s collections",
+    "Title": "Computiful Editor | My collections",
+    "AnothersTitle": "Computiful Editor | {{anotheruser}}'s collections",
     "Empty": "No collections"
   },
   "CollectionCreate": {
-    "Title": "p5.js Web Editor | Create collection",
+    "Title": "Computiful Editor | Create collection",
     "FormError": "Couldn't create collection",
     "FormLabel": "Collection name",
     "FormLabelARIA": "name",
@@ -467,8 +467,8 @@
     "Assets": "Assets"
   },
   "CollectionList": {
-    "Title": "p5.js Web Editor | My collections",
-    "AnothersTitle": "p5.js Web Editor | {{anotheruser}}'s collections",
+    "Title": "Computiful Editor | My collections",
+    "AnothersTitle": "Computiful Editor | {{anotheruser}}'s collections",
     "NoCollections": "No collections.",
     "TableSummary": "table containing all collections",
     "HeaderName": "Name",
@@ -500,8 +500,8 @@
   },
   "SketchList": {
     "View": "View",
-    "Title": "p5.js Web Editor | My sketches",
-    "AnothersTitle": "p5.js Web Editor | {{anotheruser}}'s sketches",
+    "Title": "Computiful Editor | My sketches",
+    "AnothersTitle": "Computiful Editor | {{anotheruser}}'s sketches",
     "ToggleLabelARIA": "Toggle Open/Close Sketch Options",
     "DropdownRename": "Rename",
     "DropdownDownload": "Download",
@@ -522,8 +522,8 @@
     "NoSketches": "No sketches."
   },
   "AddToCollectionSketchList": {
-    "Title": "p5.js Web Editor | My sketches",
-    "AnothersTitle": "p5.js Web Editor | {{anotheruser}}'s sketches",
+    "Title": "Computiful Editor | My sketches",
+    "AnothersTitle": "Computiful Editor | {{anotheruser}}'s sketches",
     "NoCollections": "No collections."
   },
   "Editor": {

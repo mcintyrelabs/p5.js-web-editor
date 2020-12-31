@@ -182,7 +182,7 @@ app.get('*', (req, res) => {
 // start app
 app.listen(process.env.PORT, (error) => {
   if (!error) {
-    console.log(`p5.js Web Editor is running on port: ${process.env.PORT}!`); // eslint-disable-line
+    console.log(`Computiful Editor is running on port: ${process.env.PORT}!`); // eslint-disable-line
   }
 });
 

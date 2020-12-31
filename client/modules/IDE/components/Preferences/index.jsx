@@ -94,7 +94,7 @@ class Preferences extends React.Component {
     return (
       <section className="preferences">
         <Helmet>
-          <title>p5.js Web Editor | Preferences</title>
+          <title>Computiful Editor | Preferences</title>
         </Helmet>
         <Tabs>
           <TabList>

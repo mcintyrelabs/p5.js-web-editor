@@ -1,9 +1,9 @@
 {
-  "name": "p5.js Web Editor",
-  "description": "The p5.js Web Editor is an in-browser editor for creative coding, specifically for writing p5.js sketches.",
+  "name": "Computiful Editor",
+  "description": "The Computiful Editor is a code editor designed for math students.",
   "repository": "https://github.com/processing/p5.js-web-editor",
   "logo": "https://p5js.org/assets/img/p5js.svg",
-  "keywords": ["processing", "p5js", "p5.js"],
+  "keywords": ["processing", "p5js", "p5.js", "computiful"],
   "addons": [
     {
       "plan": "mailgun:starter",

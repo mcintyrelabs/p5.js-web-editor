@@ -3,14 +3,14 @@ import Project from '../models/project';
 
 function insertErrorMessage(htmlFile) {
   const html = htmlFile.split('</head>');
-  const metaDescription = 'A web editor for p5.js, a JavaScript library with the goal of making coding accessible to artists, designers, educators, and beginners.'; // eslint-disable-line
+  const metaDescription = 'A code editor for designed for math students.'; // eslint-disable-line
   html[0] = `
     ${html[0]}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="p5.js, p5.js web editor, web editor, processing, code editor" />
+    <meta name="keywords" content="p5.js, computiful, computiful editor, math, processing, python, numpy, code editor" />
     <meta name="description" content="${metaDescription}" />
-    <title>404 Page Not Found - p5.js Web Editor</title>
+    <title>404 Page Not Found - Computiful Editor</title>
     <style>
       .header {
         position: fixed;
@@ -45,7 +45,7 @@ function insertErrorMessage(htmlFile) {
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link
       rel='shortcut icon'
-      href='https://raw.githubusercontent.com/processing/p5.js-website-OLD/master/favicon.ico'
+      href='https://computiful.org/assets/images/logo/favicon.ico'
       type='image/x-icon'
     >
   `;

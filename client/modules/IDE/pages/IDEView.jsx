@@ -39,7 +39,7 @@ import { getIsUserOwner } from '../selectors/users';
 
 function getTitle(props) {
   const { id } = props.project;
-  return id ? `p5.js Web Editor | ${props.project.name}` : 'p5.js Web Editor';
+  return id ? `Computiful Editor | ${props.project.name}` : 'Computiful Editor';
 }
 
 function warnIfUnsavedChanges(props, nextLocation) {

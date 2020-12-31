@@ -417,7 +417,7 @@
     "TitleDefault": "colección"
   },
   "Collection": {
-    "Title": "p5.js Web Editor | Mis colecciones",
+    "Title": "Computiful Editor | Mis colecciones",
     "AnothersTitle": "Editor Web p5.js | Colecciones de {{anotheruser}}",
     "Share": "Compartir",
     "URLLink": "Liga a la Colección",
@@ -441,7 +441,7 @@
     "ButtonLabelDescendingARIA": "Ordenar por {{displayName}} descendente."
   },
   "AddToCollectionList": {
-    "Title": "p5.js Web Editor | Mis colecciones",
+    "Title": "Computiful Editor | Mis colecciones",
     "AnothersTitle": "Editor Web p5.js | Colecciones de {{anotheruser}}",
     "Empty": "No hay colecciones"
   },
@@ -467,7 +467,7 @@
     "Assets": "Recursos"
   },
   "CollectionList": {
-    "Title": "p5.js Web Editor | Mis colecciones",
+    "Title": "Computiful Editor | Mis colecciones",
     "AnothersTitle": "Editor Web p5.js | Colecciones de {{anotheruser}}",
     "NoCollections": "No hay colecciones.",
     "TableSummary": "la tabla contiene todas las colecciones",
@@ -500,7 +500,7 @@
   },
   "SketchList": {
     "View": "Ver",
-    "Title": "p5.js Web Editor | Mis bosquejos",
+    "Title": "Computiful Editor | Mis bosquejos",
     "AnothersTitle": "Editor Web p5.js | Bosquejos de {{anotheruser}}",
     "ToggleLabelARIA": "Alternar Abrir/Cerrar Opciones de Bosquejo",
     "DropdownRename": "Renombrar",
@@ -522,7 +522,7 @@
     "NoSketches": "No hay bosquejos."
   },
   "AddToCollectionSketchList": {
-    "Title": "p5.js Web Editor | Mis bosquejos",
+    "Title": "Computiful Editor | Mis bosquejos",
     "AnothersTitle": "Editor Web p5.js | Bosquejos de {{anotheruser}}",
     "NoCollections": "No hay colecciones."
   },

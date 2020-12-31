@@ -18,7 +18,7 @@ import { getIsUserOwner } from '../modules/IDE/selectors/users';
 
 import CaretLeftIcon from '../images/left-arrow.svg';
 import TriangleIcon from '../images/down-filled-triangle.svg';
-import LogoIcon from '../images/p5js-logo-small.svg';
+import LogoIcon from '../images/computiful-logo-small.svg';
 
 class Nav extends React.PureComponent {
   constructor(props) {

@@ -3,13 +3,13 @@ import mailLayout from './mailLayout';
 import consolidationMailLayout from './consolidationMailLayout';
 
 export const renderAccountConsolidation = (data) => {
-  const subject = 'p5.js Web Editor Account Consolidation';
+  const subject = 'Computiful Editor Account Consolidation';
   const templateOptions = {
     domain: data.body.domain,
     headingText: 'Account Consolidation',
     greetingText: 'Hello,',
     messageText: `You're receiving this message because you previous registered for the
-                  <a href="https://editor.p5js.org">p5.js Web Editor</a>
+                  <a href="https://editor.computiful.org">Computiful Editor</a>
                   using the same email address multiple times. In order to fix bugs and prevent future bugs,
                   your accounts have been consolidated to the first account you created. You can login with
                   the following email and username:`,
@@ -21,11 +21,10 @@ export const renderAccountConsolidation = (data) => {
     resetPasswordText: 'Reset Password',
     directLinkText: 'Or copy and paste the following URL into your browser:',
     noteText: `We are grateful for your patience and understanding. Thank you for supporting p5.js and the
-              p5.js Web Editor!`,
+              Computiful Editor!`,
     meta: {
-      keywords: 'p5.js, p5.js web editor, web editor, processing, code editor',
-      description: 'A web editor for p5.js, a JavaScript library with the goal'
-        + ' of making coding accessible to artists, designers, educators, and beginners.'
+      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      description: 'A code editor for designed for math students.'
     }
   };
 
@@ -44,7 +43,7 @@ export const renderAccountConsolidation = (data) => {
 };
 
 export const renderResetPassword = (data) => {
-  const subject = 'p5.js Web Editor Password Reset';
+  const subject = 'Computiful Editor Password Reset';
   const templateOptions = {
     domain: data.body.domain,
     headingText: 'Reset your password',
@@ -53,11 +52,10 @@ export const renderResetPassword = (data) => {
     link: data.body.link,
     buttonText: 'Reset password',
     directLinkText: 'Or copy and paste the URL into your browser:',
-    noteText: 'If you did not request this, please ignore this email and your password will remain unchanged. Thanks for using the p5.js Web Editor!', // eslint-disable-line max-len
+    noteText: 'If you did not request this, please ignore this email and your password will remain unchanged. Thanks for using the Computiful Editor!', // eslint-disable-line max-len
     meta: {
-      keywords: 'p5.js, p5.js web editor, web editor, processing, code editor',
-      description: 'A web editor for p5.js, a JavaScript library with the goal'
-        + ' of making coding accessible to artists, designers, educators, and beginners.'
+      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      description: 'A code editor for designed for math students.'
     }
   };
 
@@ -85,11 +83,10 @@ export const renderEmailConfirmation = (data) => {
     link: data.body.link,
     buttonText: 'Verify Email',
     directLinkText: 'Or copy and paste the URL into your browser:',
-    noteText: 'This link is only valid for the next 24 hours. Thanks for using the p5.js Web Editor!',
+    noteText: 'This link is only valid for the next 24 hours. Thanks for using the Computiful Editor!',
     meta: {
-      keywords: 'p5.js, p5.js web editor, web editor, processing, code editor',
-      description: 'A web editor for p5.js, a JavaScript library with the goal'
-        + ' of making coding accessible to artists, designers, educators, and beginners.'
+      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      description: 'A code editor for designed for math students.'
     }
   };
 
