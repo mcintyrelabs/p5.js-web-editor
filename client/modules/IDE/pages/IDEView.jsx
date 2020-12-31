@@ -579,7 +579,7 @@ function mapStateToProps(state) {
     files: state.files,
     selectedFile:
       state.files.find(file => file.isSelectedFile) ||
-      state.files.find(file => file.name === 'sketch.js') ||
+      state.files.find(file => file.name === 'sketch.py') ||
       state.files.find(file => file.name !== 'root'),
     htmlFile: getHTMLFile(state.files),
     ide: state.ide,
