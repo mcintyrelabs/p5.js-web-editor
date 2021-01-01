@@ -35,6 +35,13 @@ canvas {
 }
 `;
 
+const pyp5jsLicense =
+`// Made with pyp5js
+// https://github.com/berinhard/pyp5js/blob/develop/LICENSE
+
+
+`;
+
 const p5Wrapper =
 `from browser import document, window
 
@@ -1231,7 +1238,7 @@ const jqueryWrapper =
 `$(function () {
   $('#sketch-holder').text('');
   $.get('sketch.py', (userCode) => {
-    const code = p5Wrapper + userCode + 'start_p5(setup, draw, {});';
+    const code = p5Wrapper + userCode + '\\nstart_p5(setup, draw, {});';
     if (window.instance) {
       window.instance.canvas.remove();
     }
@@ -1241,7 +1248,7 @@ const jqueryWrapper =
 });
 `;
 
-const pyp5js = 'const p5Wrapper = \n`' + `${p5Wrapper}` + '\n`;\n\n' + jqueryWrapper; // eslint-disable-line
+const pyp5js = pyp5jsLicense + 'const p5Wrapper = \n`' + `${p5Wrapper}` + '\n`;\n\n' + jqueryWrapper; // eslint-disable-line
 
 export default function createDefaultFiles() {
   return {
