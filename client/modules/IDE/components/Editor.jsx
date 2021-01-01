@@ -71,7 +71,7 @@ const INDENTATION_AMOUNT = 2;
 class Editor extends React.Component {
   constructor(props) {
     super(props);
-    this.tidyCode = this.tidyCode.bind(this);
+    // this.tidyCode = this.tidyCode.bind(this);
 
     this.updateLintingMessageAccessibility = debounce((annotations) => {
       this.props.clearLintMessage();
@@ -161,17 +161,17 @@ class Editor extends React.Component {
       document.getElementById('current-line').innerHTML = temp;
     });
 
-    this._cm.on('keydown', (_cm, e) => {
-      // 9 === Tab
-      if (e.keyCode === 9 && e.shiftKey) {
-        this.tidyCode();
-      }
-    });
+    // this._cm.on('keydown', (_cm, e) => {
+    //   // 9 === Tab
+    //   if (e.keyCode === 9 && e.shiftKey) {
+    //     this.tidyCode();
+    //   }
+    // });
 
     this._cm.getWrapperElement().style['font-size'] = `${this.props.fontSize}px`;
 
     this.props.provideController({
-      tidyCode: this.tidyCode,
+      // tidyCode: this.tidyCode,
       showFind: this.showFind,
       findNext: this.findNext,
       findPrev: this.findPrev,
@@ -294,23 +294,23 @@ class Editor extends React.Component {
     this._cm.execCommand('replace');
   }
 
-  tidyCode() {
-    const beautifyOptions = {
-      indent_size: INDENTATION_AMOUNT,
-      indent_with_tabs: IS_TAB_INDENT
-    };
-    const mode = this._cm.getOption('mode');
-    const currentPosition = this._cm.doc.getCursor();
-    if (mode === 'javascript') {
-      this._cm.doc.setValue(beautifyJS(this._cm.doc.getValue(), beautifyOptions));
-    } else if (mode === 'css') {
-      this._cm.doc.setValue(beautifyCSS(this._cm.doc.getValue(), beautifyOptions));
-    } else if (mode === 'htmlmixed') {
-      this._cm.doc.setValue(beautifyHTML(this._cm.doc.getValue(), beautifyOptions));
-    }
-    this._cm.focus();
-    this._cm.doc.setCursor({ line: currentPosition.line, ch: currentPosition.ch + INDENTATION_AMOUNT });
-  }
+  // tidyCode() {
+  //   const beautifyOptions = {
+  //     indent_size: INDENTATION_AMOUNT,
+  //     indent_with_tabs: IS_TAB_INDENT
+  //   };
+  //   const mode = this._cm.getOption('mode');
+  //   const currentPosition = this._cm.doc.getCursor();
+  //   if (mode === 'javascript') {
+  //     this._cm.doc.setValue(beautifyJS(this._cm.doc.getValue(), beautifyOptions));
+  //   } else if (mode === 'css') {
+  //     this._cm.doc.setValue(beautifyCSS(this._cm.doc.getValue(), beautifyOptions));
+  //   } else if (mode === 'htmlmixed') {
+  //     this._cm.doc.setValue(beautifyHTML(this._cm.doc.getValue(), beautifyOptions));
+  //   }
+  //   this._cm.focus();
+  //   this._cm.doc.setCursor({ line: currentPosition.line, ch: currentPosition.ch + INDENTATION_AMOUNT });
+  // }
 
   initializeDocuments(files) {
     this._docs = {};

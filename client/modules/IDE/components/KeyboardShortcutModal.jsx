@@ -12,10 +12,10 @@ function KeyboardShortcutModal() {
         {t('KeyboardShortcuts.ShortcutsFollow')} <a href="https://shortcuts.design/toolspage-sublimetext.html" target="_blank" rel="noopener noreferrer">{t('KeyboardShortcuts.SublimeText')}</a>.
       </p>
       <ul className="keyboard-shortcuts__list">
-        <li className="keyboard-shortcut-item">
+        {/* <li className="keyboard-shortcut-item">
           <span className="keyboard-shortcut__command">{'\u21E7'} + Tab</span>
           <span>{t('KeyboardShortcuts.CodeEditing.Tidy')}</span>
-        </li>
+        </li> */}
         <li className="keyboard-shortcut-item">
           <span className="keyboard-shortcut__command">
             {metaKeyName} + F

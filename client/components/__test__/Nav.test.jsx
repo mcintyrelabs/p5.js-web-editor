@@ -32,7 +32,7 @@ describe('Nav', () => {
     warnIfUnsavedChanges: jest.fn(),
     showKeyboardShortcutModal: jest.fn(),
     cmController: {
-      tidyCode: jest.fn(),
+      // tidyCode: jest.fn(),
       showFind: jest.fn(),
       findNext: jest.fn(),
       findPrev: jest.fn(),

@@ -380,7 +380,7 @@ class Nav extends React.PureComponent {
             <TriangleIcon className="nav__item-header-triangle" focusable="false" aria-hidden="true" />
           </button>
           <ul className="nav__dropdown" >
-            <li className="nav__dropdown-item">
+            {/* <li className="nav__dropdown-item">
               <button
                 onClick={() => {
                   this.props.cmController.tidyCode();
@@ -392,7 +392,7 @@ class Nav extends React.PureComponent {
                 {this.props.t('Nav.Edit.TidyCode')}
                 <span className="nav__keyboard-shortcut">{'\u21E7'}+Tab</span>
               </button>
-            </li>
+            </li> */}
             <li className="nav__dropdown-item">
               <button
                 onClick={this.handleFind}
@@ -800,7 +800,7 @@ Nav.propTypes = {
   warnIfUnsavedChanges: PropTypes.func,
   showKeyboardShortcutModal: PropTypes.func.isRequired,
   cmController: PropTypes.shape({
-    tidyCode: PropTypes.func,
+    // tidyCode: PropTypes.func,
     showFind: PropTypes.func,
     findNext: PropTypes.func,
     findPrev: PropTypes.func,
