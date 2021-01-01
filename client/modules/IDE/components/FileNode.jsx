@@ -148,10 +148,10 @@ class FileNode extends React.Component {
     setTimeout(() => this.hideFileOptions(), 0);
   }
 
-  handleClickUploadFile = () => {
-    this.props.openUploadFileModal(this.props.id);
-    setTimeout(this.hideFileOptions, 0);
-  }
+  // handleClickUploadFile = () => {
+  //   this.props.openUploadFileModal(this.props.id);
+  //   setTimeout(this.hideFileOptions, 0);
+  // }
 
   handleClickDelete = () => {
     const prompt = this.props.t('Common.DeleteConfirmation', { name: this.props.name });
@@ -223,7 +223,12 @@ class FileNode extends React.Component {
 
   renderChild = childId => (
     <li key={childId}>
-      <ConnectedFileNode id={childId} parentId={this.props.id} canEdit={this.props.canEdit} onClickFile={this.props.onClickFile} />
+      <ConnectedFileNode
+        id={childId}
+        parentId={this.props.id}
+        canEdit={this.props.canEdit}
+        onClickFile={this.props.onClickFile}
+      />
     </li>
   )
 
@@ -327,7 +332,7 @@ class FileNode extends React.Component {
                         {t('FileNode.AddFile')}
                       </button>
                     </li>
-                    { this.props.authenticated &&
+                    {/* { this.props.authenticated &&
                       <li>
                         <button
                           aria-label={t('FileNode.UploadFileARIA')}
@@ -338,7 +343,7 @@ class FileNode extends React.Component {
                           {t('FileNode.UploadFile')}
                         </button>
                       </li>
-                    }
+                    } */}
                   </React.Fragment>
                 }
                 <li>
@@ -392,8 +397,8 @@ FileNode.propTypes = {
   showFolderChildren: PropTypes.func.isRequired,
   hideFolderChildren: PropTypes.func.isRequired,
   canEdit: PropTypes.bool.isRequired,
-  openUploadFileModal: PropTypes.func.isRequired,
-  authenticated: PropTypes.bool.isRequired,
+  // openUploadFileModal: PropTypes.func.isRequired,
+  // authenticated: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
   onClickFile: PropTypes.func
 };

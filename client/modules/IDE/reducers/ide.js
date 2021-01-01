@@ -9,7 +9,7 @@ const initialState = {
   preferencesIsVisible: false,
   projectOptionsVisible: false,
   newFolderModalVisible: false,
-  uploadFileModalVisible: false,
+  // uploadFileModalVisible: false,
   shareModalVisible: false,
   shareModalProjectId: 'abcd',
   shareModalProjectName: 'My Cute Sketch',
@@ -114,10 +114,10 @@ const ide = (state = initialState, action) => {
       return Object.assign({}, state, { runtimeErrorWarningVisible: false });
     case ActionTypes.SHOW_RUNTIME_ERROR_WARNING:
       return Object.assign({}, state, { runtimeErrorWarningVisible: true });
-    case ActionTypes.OPEN_UPLOAD_FILE_MODAL:
-      return Object.assign({}, state, { uploadFileModalVisible: true, parentId: action.parentId });
-    case ActionTypes.CLOSE_UPLOAD_FILE_MODAL:
-      return Object.assign({}, state, { uploadFileModalVisible: false });
+    // case ActionTypes.OPEN_UPLOAD_FILE_MODAL:
+    //   return Object.assign({}, state, { uploadFileModalVisible: true, parentId: action.parentId });
+    // case ActionTypes.CLOSE_UPLOAD_FILE_MODAL:
+    //   return Object.assign({}, state, { uploadFileModalVisible: false });
     default:
       return state;
   }

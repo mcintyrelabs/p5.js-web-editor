@@ -90,7 +90,7 @@ const handleGlobalKeydown = (props, cmController) => (e) => {
     setAllAccessibleOutput,
     saveProject, cloneProject, showErrorModal, startSketch, stopSketch,
     expandSidebar, collapseSidebar, expandConsole, collapseConsole,
-    closeNewFolderModal, closeUploadFileModal, closeNewFileModal, isUserOwner
+    closeNewFolderModal, closeNewFileModal, isUserOwner
   } = props;
 
 
@@ -139,7 +139,7 @@ const handleGlobalKeydown = (props, cmController) => (e) => {
     else expandConsole();
   } else if (e.keyCode === 27) {
     if (ide.newFolderModalVisible) closeNewFolderModal();
-    else if (ide.uploadFileModalVisible) closeUploadFileModal();
+    // else if (ide.uploadFileModalVisible) closeUploadFileModal();
     else if (ide.modalIsVisible) closeNewFileModal();
   }
 };
@@ -297,7 +297,7 @@ const handleGlobalKeydownProps = {
   showErrorModal: PropTypes.func.isRequired,
 
   closeNewFolderModal: PropTypes.func.isRequired,
-  closeUploadFileModal: PropTypes.func.isRequired,
+  // closeUploadFileModal: PropTypes.func.isRequired,
   closeNewFileModal: PropTypes.func.isRequired,
   isUserOwner: PropTypes.bool.isRequired
 };

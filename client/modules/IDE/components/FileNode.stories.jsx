@@ -24,7 +24,7 @@ export const Show = () => (
     newFolder={action('newFolder')}
     showFolderChildren={action('showFolderChildren')}
     hideFolderChildren={action('hideFolderChildren')}
-    openUploadFileModal={action('openUploadFileModal')}
+    // openUploadFileModal={action('openUploadFileModal')}
     canEdit
     authenticated
   />

@@ -13,7 +13,7 @@ import Toolbar from '../components/Toolbar';
 import Preferences from '../components/Preferences/index';
 import NewFileModal from '../components/NewFileModal';
 import NewFolderModal from '../components/NewFolderModal';
-import UploadFileModal from '../components/UploadFileModal';
+// import UploadFileModal from '../components/UploadFileModal';
 import ShareModal from '../components/ShareModal';
 import KeyboardShortcutModal from '../components/KeyboardShortcutModal';
 import ErrorModal from '../components/ErrorModal';
@@ -226,8 +226,8 @@ class IDEView extends React.Component {
     } else if (e.keyCode === 27) {
       if (this.props.ide.newFolderModalVisible) {
         this.props.closeNewFolderModal();
-      } else if (this.props.ide.uploadFileModalVisible) {
-        this.props.closeUploadFileModal();
+      // } else if (this.props.ide.uploadFileModalVisible) {
+      //   this.props.closeUploadFileModal();
       } else if (this.props.ide.modalIsVisible) {
         this.props.closeNewFileModal();
       }
@@ -309,8 +309,8 @@ class IDEView extends React.Component {
               newFolder={this.props.newFolder}
               user={this.props.user}
               owner={this.props.project.owner}
-              openUploadFileModal={this.props.openUploadFileModal}
-              closeUploadFileModal={this.props.closeUploadFileModal}
+              // openUploadFileModal={this.props.openUploadFileModal}
+              // closeUploadFileModal={this.props.closeUploadFileModal}
             />
             <SplitPane
               split="vertical"
@@ -372,9 +372,9 @@ class IDEView extends React.Component {
             createFolder={this.props.createFolder}
           />
         )}
-        {this.props.ide.uploadFileModalVisible && (
+        {/* {this.props.ide.uploadFileModalVisible && (
           <UploadFileModal closeModal={this.props.closeUploadFileModal} />
-        )}
+        )} */}
         {this.props.location.pathname === '/about' && (
           <Overlay
             title={this.props.t('About.Title')}
@@ -477,7 +477,7 @@ IDEView.propTypes = {
     projectOptionsVisible: PropTypes.bool.isRequired,
     preferencesIsVisible: PropTypes.bool.isRequired,
     modalIsVisible: PropTypes.bool.isRequired,
-    uploadFileModalVisible: PropTypes.bool.isRequired,
+    // uploadFileModalVisible: PropTypes.bool.isRequired,
     newFolderModalVisible: PropTypes.bool.isRequired,
     justOpenedProject: PropTypes.bool.isRequired,
     sidebarIsExpanded: PropTypes.bool.isRequired,
@@ -568,8 +568,8 @@ IDEView.propTypes = {
   hideErrorModal: PropTypes.func.isRequired,
   clearPersistedState: PropTypes.func.isRequired,
   startSketch: PropTypes.func.isRequired,
-  openUploadFileModal: PropTypes.func.isRequired,
-  closeUploadFileModal: PropTypes.func.isRequired,
+  // openUploadFileModal: PropTypes.func.isRequired,
+  // closeUploadFileModal: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
   isUserOwner: PropTypes.bool.isRequired
 };
