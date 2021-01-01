@@ -43,8 +43,8 @@ import '../../../utils/codemirror-search';
 
 import beepUrl from '../../../sounds/audioAlert.mp3';
 import UnsavedChangesDotIcon from '../../../images/unsaved-changes-dot.svg';
-import RightArrowIcon from '../../../images/right-arrow.svg';
-import LeftArrowIcon from '../../../images/left-arrow.svg';
+// import RightArrowIcon from '../../../images/right-arrow.svg';
+// import LeftArrowIcon from '../../../images/left-arrow.svg';
 import { getHTMLFile } from '../reducers/files';
 import { getIsUserOwner } from '../selectors/users';
 
@@ -57,15 +57,15 @@ import * as UserActions from '../../User/actions';
 import * as ToastActions from '../actions/toast';
 import * as ConsoleActions from '../actions/console';
 
-const beautifyCSS = beautifyJS.css;
-const beautifyHTML = beautifyJS.html;
+// const beautifyCSS = beautifyJS.css;
+// const beautifyHTML = beautifyJS.html;
 
 window.JSHINT = JSHINT;
 window.CSSLint = CSSLint;
 window.HTMLHint = HTMLHint;
 delete CodeMirror.keyMap.sublime['Shift-Tab'];
 
-const IS_TAB_INDENT = false;
+// const IS_TAB_INDENT = false;
 const INDENTATION_AMOUNT = 2;
 
 class Editor extends React.Component {
@@ -345,7 +345,7 @@ class Editor extends React.Component {
     return (
       <section className={editorSectionClass} >
         <header className="editor__header">
-          <button
+          {/* <button
             aria-label={this.props.t('Editor.OpenSketchARIA')}
             className="sidebar__contract"
             onClick={this.props.collapseSidebar}
@@ -358,7 +358,7 @@ class Editor extends React.Component {
             onClick={this.props.expandSidebar}
           >
             <RightArrowIcon focusable="false" aria-hidden="true" />
-          </button>
+          </button> */}
           <div className="editor__file-name">
             <span>
               {this.props.file.name}
@@ -426,8 +426,8 @@ Editor.propTypes = {
     content: PropTypes.string.isRequired
   })).isRequired,
   isExpanded: PropTypes.bool.isRequired,
-  collapseSidebar: PropTypes.func.isRequired,
-  expandSidebar: PropTypes.func.isRequired,
+  // collapseSidebar: PropTypes.func.isRequired,
+  // expandSidebar: PropTypes.func.isRequired,
   isUserOwner: PropTypes.bool.isRequired,
   clearConsole: PropTypes.func.isRequired,
   showRuntimeErrorWarning: PropTypes.func.isRequired,

@@ -1235,6 +1235,14 @@ def add_library(lib_name):
     script.onload = logOnloaded
     script.src = src
     document.head.appendChild(script)
+
+
+def setup():
+    pass
+
+
+def draw():
+    pass
 `;
 
 const jqueryWrapper =

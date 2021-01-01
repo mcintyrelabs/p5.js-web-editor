@@ -37,8 +37,8 @@ class Nav extends React.PureComponent {
     this.handleShare = this.handleShare.bind(this);
     this.handleDownload = this.handleDownload.bind(this);
     this.handleFind = this.handleFind.bind(this);
-    this.handleAddFile = this.handleAddFile.bind(this);
-    this.handleAddFolder = this.handleAddFolder.bind(this);
+    // this.handleAddFile = this.handleAddFile.bind(this);
+    // this.handleAddFolder = this.handleAddFolder.bind(this);
     this.handleFindNext = this.handleFindNext.bind(this);
     this.handleRun = this.handleRun.bind(this);
     this.handleFindPrevious = this.handleFindPrevious.bind(this);
@@ -53,8 +53,8 @@ class Nav extends React.PureComponent {
     this.setDropdownForNone = this.setDropdown.bind(this, 'none');
     this.toggleDropdownForEdit = this.toggleDropdown.bind(this, 'edit');
     this.handleFocusForEdit = this.handleFocus.bind(this, 'edit');
-    this.toggleDropdownForSketch = this.toggleDropdown.bind(this, 'sketch');
-    this.handleFocusForSketch = this.handleFocus.bind(this, 'sketch');
+    // this.toggleDropdownForSketch = this.toggleDropdown.bind(this, 'sketch');
+    // this.handleFocusForSketch = this.handleFocus.bind(this, 'sketch');
     this.toggleDropdownForHelp = this.toggleDropdown.bind(this, 'help');
     this.handleFocusForHelp = this.handleFocus.bind(this, 'help');
     this.toggleDropdownForAccount = this.toggleDropdown.bind(this, 'account');
@@ -435,7 +435,7 @@ class Nav extends React.PureComponent {
             </li>
           </ul>
         </li>
-        <li className={navDropdownState.sketch}>
+        {/* <li className={navDropdownState.sketch}>
           <button
             onClick={this.toggleDropdownForSketch}
             onBlur={this.handleBlur}
@@ -488,7 +488,7 @@ class Nav extends React.PureComponent {
                 <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+Enter</span>
               </button>
             </li>
-            {/* <li className="nav__dropdown-item">
+            <li className="nav__dropdown-item">
               <button
                 onClick={this.handleStartAccessible}
                 onFocus={this.handleFocusForSketch}
@@ -507,9 +507,9 @@ class Nav extends React.PureComponent {
                 Stop Accessible
                 <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+2</span>
               </button>
-            </li> */}
+            </li>
           </ul>
-        </li>
+        </li> */}
         <li className={navDropdownState.help}>
           <button
             onClick={this.toggleDropdownForHelp}
