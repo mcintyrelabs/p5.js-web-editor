@@ -13,11 +13,11 @@ describe('domain-objects/Project', () => {
       expect(containsRootHtmlFile({ 'index.html': {} })).toBe(true);
       expect(containsRootHtmlFile({ 'another-one.html': {} })).toBe(true);
       expect(containsRootHtmlFile({ 'one.html': {}, 'two.html': {} })).toBe(true);
-      expect(containsRootHtmlFile({ 'one.html': {}, 'sketch.js': {} })).toBe(true);
+      expect(containsRootHtmlFile({ 'one.html': {}, 'sketch.py': {} })).toBe(true);
     });
 
     it('returns false anything else', () => {
-      expect(containsRootHtmlFile({ 'sketch.js': {} })).toBe(false);
+      expect(containsRootHtmlFile({ 'sketch.py': {} })).toBe(false);
     });
 
     it('ignores nested html', () => {
@@ -70,10 +70,11 @@ describe('domain-objects/Project', () => {
 
       const { files } = toModel(params);
 
-      expect(files.length).toBe(4);
+      expect(files.length).toBe(5);
       expect(find(files, { name: 'index.html' })).not.toBeUndefined();
-      expect(find(files, { name: 'sketch.js' })).not.toBeUndefined();
+      expect(find(files, { name: 'sketch.py' })).not.toBeUndefined();
       expect(find(files, { name: 'style.css' })).not.toBeUndefined();
+      expect(find(files, { name: 'pyp5.js' })).not.toBeUndefined();
     });
 
     it('does not create default files if any root .html is provided', () => {
@@ -90,14 +91,15 @@ describe('domain-objects/Project', () => {
       expect(files.length).toBe(2);
       expect(find(files, { name: 'example.html' })).not.toBeUndefined();
       expect(find(files, { name: 'index.html' })).toBeUndefined();
-      expect(find(files, { name: 'sketch.js' })).toBeUndefined();
+      expect(find(files, { name: 'sketch.py' })).toBeUndefined();
       expect(find(files, { name: 'style.css' })).toBeUndefined();
+      expect(find(files, { name: 'pyp5.js' })).toBeUndefined();
     });
 
-    it('does not overwrite default CSS and JS of the same name if provided', () => {
+    it('does not overwrite default CSS and PY of the same name if provided', () => {
       const params = {
         files: {
-          'sketch.js': {
+          'sketch.py': {
             content: 'const sketch = true;'
           },
           'style.css': {
@@ -108,10 +110,10 @@ describe('domain-objects/Project', () => {
 
       const { files } = toModel(params);
 
-      expect(files.length).toBe(4);
+      expect(files.length).toBe(5);
       expect(find(files, { name: 'index.html' })).not.toBeUndefined();
 
-      const sketchFile = find(files, { name: 'sketch.js' });
+      const sketchFile = find(files, { name: 'sketch.py' });
       expect(sketchFile.content).toBe('const sketch = true;');
 
       const cssFile = find(files, { name: 'style.css' });
