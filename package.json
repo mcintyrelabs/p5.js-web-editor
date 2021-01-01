@@ -161,7 +161,7 @@
     "date-fns": "^2.16.1",
     "decomment": "^0.8.7",
     "dotenv": "^2.0.0",
-    "dropzone": "^4.3.0",
+    "dropzone": "^5.7.2",
     "escape-string-regexp": "^1.0.5",
     "eslint-loader": "^2.2.1",
     "express": "^4.17.1",

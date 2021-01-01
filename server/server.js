@@ -38,7 +38,7 @@ const MongoStore = connectMongo(session);
 app.get('/health', (req, res) => res.json({ success: true }));
 
 const allowedCorsOrigins = [
-  /p5js\.org$/,
+  /computiful\.org$/,
 ];
 
 // to allow client-only development
