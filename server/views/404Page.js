@@ -3,7 +3,7 @@ import Project from '../models/project';
 
 function insertErrorMessage(htmlFile) {
   const html = htmlFile.split('</head>');
-  const metaDescription = 'A code editor for designed for math students.'; // eslint-disable-line
+  const metaDescription = 'A simple code editor for for math students.'; // eslint-disable-line
   html[0] = `
     ${html[0]}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -42,9 +42,10 @@ class DashboardView extends React.Component {
   selectedTabKey() {
     const path = this.props.location.pathname;
 
-    if (/assets/.test(path)) {
-      return TabKey.assets;
-    } else if (/collections/.test(path)) {
+    // if (/assets/.test(path)) {
+    //   return TabKey.assets;
+    // } else
+    if (/collections/.test(path)) {
       return TabKey.collections;
     }
 
@@ -74,8 +75,8 @@ class DashboardView extends React.Component {
 
   renderActionButton(tabKey, username, t) {
     switch (tabKey) {
-      case TabKey.assets:
-        return this.isOwner() && <AssetSize />;
+      // case TabKey.assets:
+      //   return this.isOwner() && <AssetSize />;
       case TabKey.collections:
         return this.isOwner() && (
           <React.Fragment>
@@ -97,8 +98,8 @@ class DashboardView extends React.Component {
 
   renderContent(tabKey, username) {
     switch (tabKey) {
-      case TabKey.assets:
-        return <AssetList key={username} username={username} />;
+      // case TabKey.assets:
+      //   return <AssetList key={username} username={username} />;
       case TabKey.collections:
         return <CollectionList key={username} username={username} />;
       case TabKey.sketches:

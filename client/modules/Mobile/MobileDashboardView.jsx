@@ -134,7 +134,7 @@ const SubheaderButton = styled(Button)`
 const Panels = {
   sketches: SketchList,
   collections: CollectionList,
-  assets: AssetList
+  // assets: AssetList
 };
 
 
@@ -172,7 +172,7 @@ const MobileDashboard = ({ params, location }) => {
   const TabLabels = {
     sketches: t('MobileDashboardView.Sketches'),
     collections: t('MobileDashboardView.Collections'),
-    assets: t('MobileDashboardView.Assets')
+    // assets: t('MobileDashboardView.Assets')
   };
   const isExamples = paramsUsername === EXAMPLE_USERNAME;
   const panel = getPanel(pathname);

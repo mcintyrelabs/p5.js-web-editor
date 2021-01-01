@@ -50,7 +50,7 @@ const routes = store => (
     <Route path="/:username/full/:project_id" component={FullView} />
     <Route path="/full/:project_id" component={FullView} />
 
-    <Route path="/:username/assets" component={userIsAuthenticated(userIsAuthorized(mobileFirst(MobileDashboardView, DashboardView)))} />
+    {/* <Route path="/:username/assets" component={userIsAuthenticated(userIsAuthorized(mobileFirst(MobileDashboardView, DashboardView)))} /> */}
     <Route path="/:username/sketches" component={mobileFirst(MobileDashboardView, DashboardView)} />
     <Route path="/:username/sketches/:project_id" component={mobileFirst(MobileIDEView, IDEView)} />
     <Route path="/:username/sketches/:project_id/add-to-collection" component={mobileFirst(MobileIDEView, IDEView)} />
@@ -60,7 +60,7 @@ const routes = store => (
     <Route path="/:username/collections/:collection_id" component={CollectionView} />
 
     <Route path="/sketches" component={createRedirectWithUsername('/:username/sketches')} />
-    <Route path="/assets" component={createRedirectWithUsername('/:username/assets')} />
+    {/* <Route path="/assets" component={createRedirectWithUsername('/:username/assets')} /> */}
     <Route path="/account" component={userIsAuthenticated(AccountView)} />
     <Route path="/about" component={IDEView} />
 

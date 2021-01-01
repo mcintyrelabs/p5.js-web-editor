@@ -677,7 +677,7 @@ class Nav extends React.PureComponent {
                 </Link>
               </li>
             }
-            <li className="nav__dropdown-item">
+            {/* <li className="nav__dropdown-item">
               <Link
                 to={`/${this.props.user.username}/assets`}
                 onFocus={this.handleFocusForAccount}
@@ -686,7 +686,7 @@ class Nav extends React.PureComponent {
               >
                 {this.props.t('Nav.Auth.MyAssets')}
               </Link>
-            </li>
+            </li> */}
             <li className="nav__dropdown-item">
               <Link
                 to="/account"
