@@ -352,7 +352,7 @@ class Nav extends React.PureComponent {
                   {this.props.t('Nav.File.AddToCollection')}
                 </Link>
               </li>}
-            { getConfig('EXAMPLES_ENABLED') &&
+            {/* { getConfig('EXAMPLES_ENABLED') &&
             <li className="nav__dropdown-item">
               <Link
                 to="/p5/sketches"
@@ -362,7 +362,7 @@ class Nav extends React.PureComponent {
               >
                 {this.props.t('Nav.File.Examples')}
               </Link>
-            </li> }
+            </li> } */}
           </ul>
         </li>
         <li className={navDropdownState.edit}>
@@ -534,9 +534,9 @@ class Nav extends React.PureComponent {
                 {this.props.t('Nav.Help.KeyboardShortcuts')}
               </button>
             </li>
-            <li className="nav__dropdown-item">
+            {/* <li className="nav__dropdown-item">
               <a
-                href="https://p5js.org/reference/"
+                href="https://computiful.org/reference/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onFocus={this.handleFocusForHelp}
@@ -544,7 +544,7 @@ class Nav extends React.PureComponent {
                 onClick={this.setDropdownForNone}
               >{this.props.t('Nav.Help.Reference')}
               </a>
-            </li>
+            </li> */}
             <li className="nav__dropdown-item">
               <Link
                 to="/about"

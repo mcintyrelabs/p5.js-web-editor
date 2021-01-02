@@ -1,7 +1,11 @@
 .about__logo {
   @include themify() {
-    & path {
+    path:first-of-type {
       fill: getThemifyVariable('logo-color');
+    }
+
+    path:nth-of-type(2) {
+      fill: getThemifyVariable('about-logo-background-color')
     }
   }
 }

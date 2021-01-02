@@ -177,16 +177,16 @@
     position: absolute;
   }
 }
-.svg__logo g > path {
+.svg__logo path:first-of-type {
   @include themify() {
     fill: getThemifyVariable('logo-color');
   }
 }
-.svg__logo g g:first-of-type path {
-  fill: none;
-}
+// .svg__logo g g:first-of-type path {
+//   fill: none;
+// }
 
-.svg__logo g g:first-of-type use {
+.svg__logo path:nth-of-type(2) {
   @include themify() {
     fill: getThemifyVariable('logo-background-color');
   }

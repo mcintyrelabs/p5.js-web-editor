@@ -43,6 +43,7 @@ $themes: (
   light: (
     logo-color: $computiful-blue,
     logo-background-color: $lightest,
+    about-logo-background-color: $lightest,
     heavy-text-color: $darker,
     primary-text-color: $dark,
     secondary-text-color: $medium-dark,
@@ -119,6 +120,7 @@ $themes: (
   dark: (
     logo-color: $computiful-blue,
     logo-background-color: $lightest,
+    about-logo-background-color: $lightest,
     heavy-text-color: $lightest,
     primary-text-color: $lightest,
     dropzone-text-color: $black,
@@ -132,7 +134,7 @@ $themes: (
     button-border-color: $middle-dark,
     toolbar-button-color: $lightest,
     toolbar-button-background-color: $medium-dark,
-    button-background-hover-color: $p5js-pink,
+    button-background-hover-color: $computiful-blue,
     button-background-active-color: $computiful-active-blue,
     button-nav-inactive-color: $middle-light,
     button-hover-color: $lightest,
@@ -193,6 +195,7 @@ $themes: (
   contrast: (
     logo-color: $yellow,
     logo-background-color: $darker,
+    about-logo-background-color: $dark,
     heavy-text-color: $yellow,
     primary-text-color: $lightest,
     dropzone-text-color: $black,

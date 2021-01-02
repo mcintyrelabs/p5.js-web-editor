@@ -361,7 +361,7 @@ class Editor extends React.Component {
           </button> */}
           <div className="editor__file-name">
             <span>
-              {this.props.file.name}
+              {/* {this.props.file.name} */}
               <span className="editor__unsaved-changes">
                 {this.props.unsavedChanges ?
                   <UnsavedChangesDotIcon role="img" aria-label={this.props.t('Editor.UnsavedChangesARIA')} focusable="false" /> :

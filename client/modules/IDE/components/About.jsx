@@ -16,86 +16,78 @@ function About(props) {
         <SquareLogoIcon className="about__logo" role="img" aria-label={t('Common.p5logoARIA')} focusable="false" />
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">{t('About.NewP5')}</h3>
+        <h3 className="about__content-column-title">Resources</h3>
         <p className="about__content-column-list">
           <a
-            href="https://p5js.org/examples/"
+            href="https://computiful.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            {t('About.Examples')}
-          </a>
-        </p>
-        <p className="about__content-column-list">
-          <a
-            href="https://p5js.org/learn/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            {t('About.Learn')}
+            Textbook
           </a>
         </p>
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">{t('About.Resources')}</h3>
+        <h3 className="about__content-column-title">Credits</h3>
         <p className="about__content-column-list">
           <a
-            href="https://p5js.org/libraries/"
+            href="https://github.com/processing/p5.js"
             target="_blank"
             rel="noopener noreferrer"
           >
             <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            {t('About.Libraries')}
+            p5.js
           </a>
         </p>
         <p className="about__content-column-list">
-          <a
-            href="https://p5js.org/reference/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            {t('Nav.Help.Reference')}
-          </a>
-        </p>
-        <p className="about__content-column-list">
-          <a
-            href="https://discourse.processing.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            {t('About.Forum')}
-          </a>
-        </p>
-      </div>
-      <div className="about__footer">
-        <p className="about__footer-list">
           <a
             href="https://github.com/processing/p5.js-web-editor"
             target="_blank"
             rel="noopener noreferrer"
-          >{t('About.Contribute')}
+          >
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            p5.js Web Editor
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://github.com/berinhard/pyp5js"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            pyp5js
+          </a>
+        </p>
+      </div>
+      <div className="about__footer">
+        <br></br>
+        A simple code editor for math students.
+        {/* <p className="about__footer-list">
+          <a
+            href="https://github.com/mcintyrelabs/p5.js-web-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Contribute
           </a>
         </p>
         <p className="about__footer-list">
           <a
-            href="https://github.com/processing/p5.js-web-editor/issues/new"
+            href="https://computiful.org/tos"
             target="_blank"
             rel="noopener noreferrer"
-          >{t('About.Report')}
+          >Terms of Service
           </a>
         </p>
         <p className="about__footer-list">
           <a
-            href="https://twitter.com/p5xjs?lang=en"
+            href="https://computiful.org/privacy"
             target="_blank"
             rel="noopener noreferrer"
-          >Twitter
+          >Privacy Policy
           </a>
-        </p>
+        </p> */}
       </div>
     </div>
   );

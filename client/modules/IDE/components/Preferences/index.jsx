@@ -202,7 +202,7 @@ class Preferences extends React.Component {
                 <label htmlFor="autosave-off" className="preference__option">{this.props.t('Preferences.Off')}</label>
               </div>
             </div>
-            <div className="preference">
+            {/* <div className="preference">
               <h4 className="preference__title">{this.props.t('Preferences.AutocloseBracketsQuotes')}</h4>
               <div className="preference__options">
                 <input
@@ -228,7 +228,7 @@ class Preferences extends React.Component {
                 />
                 <label htmlFor="autoclosebracketsquotes-off" className="preference__option">{this.props.t('Preferences.Off')}</label>
               </div>
-            </div>
+            </div> */}
             <div className="preference">
               <h4 className="preference__title">{this.props.t('Preferences.WordWrap')}</h4>
               <div className="preference__options">
@@ -388,8 +388,8 @@ Preferences.propTypes = {
   setLintWarning: PropTypes.func.isRequired,
   theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
-  autocloseBracketsQuotes: PropTypes.bool.isRequired,
-  setAutocloseBracketsQuotes: PropTypes.func.isRequired,
+  // autocloseBracketsQuotes: PropTypes.bool.isRequired,
+  // setAutocloseBracketsQuotes: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
 };
 
