@@ -62,19 +62,9 @@ function About(props) {
         </p>
       </div>
       <div className="about__footer">
-        <br></br>
-        A simple code editor for math students.
-        {/* <p className="about__footer-list">
-          <a
-            href="https://github.com/mcintyrelabs/p5.js-web-editor"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Contribute
-          </a>
-        </p>
         <p className="about__footer-list">
           <a
-            href="https://computiful.org/tos"
+            href="https://legal.computiful.org/tos/"
             target="_blank"
             rel="noopener noreferrer"
           >Terms of Service
@@ -82,12 +72,20 @@ function About(props) {
         </p>
         <p className="about__footer-list">
           <a
-            href="https://computiful.org/privacy"
+            href="https://legal.computiful.org/privacy/"
             target="_blank"
             rel="noopener noreferrer"
           >Privacy Policy
           </a>
-        </p> */}
+        </p>
+        <p className="about__footer-list">
+          <a
+            href="https://legal.computiful.org/community/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Community Guidelines
+          </a>
+        </p>
       </div>
     </div>
   );
