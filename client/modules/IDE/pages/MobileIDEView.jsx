@@ -18,8 +18,8 @@ import * as EditorAccessibilityActions from '../actions/editorAccessibility';
 // Local Imports
 import Editor from '../components/Editor';
 
-import { PlayIcon, MoreIcon, FolderIcon, PreferencesIcon, TerminalIcon, SaveIcon } from '../../../common/icons';
-import UnsavedChangesDotIcon from '../../../images/unsaved-changes-dot.svg';
+import { PlayIcon, MoreIcon, PreferencesIcon, TerminalIcon, SaveIcon } from '../../../common/icons';
+// import UnsavedChangesDotIcon from '../../../images/unsaved-changes-dot.svg';
 
 import IconButton from '../../../components/mobile/IconButton';
 import Header from '../../../components/mobile/Header';
@@ -44,10 +44,10 @@ import * as device from '../../../utils/device';
 const withChangeDot = (title, unsavedChanges = false) => (
   <span>
     {title}
-    <span className="editor__unsaved-changes">
+    {/* <span className="editor__unsaved-changes">
       {unsavedChanges &&
       <UnsavedChangesDotIcon role="img" aria-label="Sketch has unsaved changes" focusable="false" />}
-    </span>
+    </span> */}
   </span>
 );
 const getRootFile = files => files && files.filter(file => file.name === 'root')[0];
@@ -67,13 +67,13 @@ const getNavOptions = (username = undefined, logoutUser = () => {}, toggleForceD
     ? [
       { icon: PreferencesIcon, title: t('MobileIDEView.Preferences'), href: '/preferences', },
       { icon: PreferencesIcon, title: t('MobileIDEView.MyStuff'), href: `/${username}/sketches` },
-      { icon: PreferencesIcon, title: t('MobileIDEView.Examples'), href: '/p5/sketches' },
+      // { icon: PreferencesIcon, title: t('MobileIDEView.Examples'), href: '/p5/sketches' },
       { icon: PreferencesIcon, title: t('MobileIDEView.OriginalEditor'), action: toggleForceDesktop, },
       { icon: PreferencesIcon, title: t('MobileIDEView.Logout'), action: logoutUser, },
     ]
     : [
       { icon: PreferencesIcon, title: t('MobileIDEView.Preferences'), href: '/preferences', },
-      { icon: PreferencesIcon, title: t('MobileIDEView.Examples'), href: '/p5/sketches' },
+      // { icon: PreferencesIcon, title: t('MobileIDEView.Examples'), href: '/p5/sketches' },
       { icon: PreferencesIcon, title: t('MobileIDEView.OriginalEditor'), action: toggleForceDesktop, },
       { icon: PreferencesIcon, title: t('MobileIDEView.Login'), href: '/login', },
     ]
@@ -89,7 +89,8 @@ const handleGlobalKeydown = (props, cmController) => (e) => {
     user, project, ide,
     setAllAccessibleOutput,
     saveProject, cloneProject, showErrorModal, startSketch, stopSketch,
-    expandSidebar, collapseSidebar, expandConsole, collapseConsole,
+    // expandSidebar, collapseSidebar,
+    expandConsole, collapseConsole,
     closeNewFolderModal, closeNewFileModal, isUserOwner
   } = props;
 
@@ -128,11 +129,12 @@ const handleGlobalKeydown = (props, cmController) => (e) => {
       else showErrorModal('forceAuthentication');
 
     // 13 === enter
-    } else if (e.keyCode === 66) {
-      e.preventDefault();
-      if (!ide.sidebarIsExpanded) expandSidebar();
-      else collapseSidebar();
     }
+    // else if (e.keyCode === 66) {
+    //   e.preventDefault();
+    //   if (!ide.sidebarIsExpanded) expandSidebar();
+    //   else collapseSidebar();
+    // }
   } else if (e.keyCode === 192 && e.ctrlKey) {
     e.preventDefault();
     if (ide.consoleIsExpanded) collapseConsole();
@@ -244,7 +246,7 @@ const MobileIDEView = (props) => {
       icon: TerminalIcon, aria: 'Toggle console open/closed', action: consoleIsExpanded ? collapseConsole : expandConsole, inverted: true
     },
     { icon: SaveIcon, aria: 'Save project', action: () => saveProject(cmController.getContent(), false, true) },
-    { icon: FolderIcon, aria: 'Open files explorer', action: toggleExplorer }
+    // { icon: FolderIcon, aria: 'Open files explorer', action: toggleExplorer }
     ];
 
   return (
@@ -252,7 +254,7 @@ const MobileIDEView = (props) => {
       <Explorer />
       <Header
         title={withChangeDot(project.name, unsavedChanges)}
-        subtitle={filename}
+        // subtitle={filename}
       >
         <NavItem>
 
@@ -288,8 +290,8 @@ const MobileIDEView = (props) => {
 const handleGlobalKeydownProps = {
   expandConsole: PropTypes.func.isRequired,
   collapseConsole: PropTypes.func.isRequired,
-  expandSidebar: PropTypes.func.isRequired,
-  collapseSidebar: PropTypes.func.isRequired,
+  // expandSidebar: PropTypes.func.isRequired,
+  // collapseSidebar: PropTypes.func.isRequired,
 
   setAllAccessibleOutput: PropTypes.func.isRequired,
   saveProject: PropTypes.func.isRequired,

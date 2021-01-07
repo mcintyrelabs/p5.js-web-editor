@@ -42,7 +42,7 @@ import { metaKey, } from '../../../utils/metaKey';
 import '../../../utils/codemirror-search';
 
 import beepUrl from '../../../sounds/audioAlert.mp3';
-import UnsavedChangesDotIcon from '../../../images/unsaved-changes-dot.svg';
+// import UnsavedChangesDotIcon from '../../../images/unsaved-changes-dot.svg';
 // import RightArrowIcon from '../../../images/right-arrow.svg';
 // import LeftArrowIcon from '../../../images/left-arrow.svg';
 import { getHTMLFile } from '../reducers/files';
@@ -360,14 +360,14 @@ class Editor extends React.Component {
             <RightArrowIcon focusable="false" aria-hidden="true" />
           </button> */}
           <div className="editor__file-name">
-            <span>
-              {/* {this.props.file.name} */}
+            {/* <span>
+              {this.props.file.name}
               <span className="editor__unsaved-changes">
                 {this.props.unsavedChanges ?
                   <UnsavedChangesDotIcon role="img" aria-label={this.props.t('Editor.UnsavedChangesARIA')} focusable="false" /> :
                   null}
               </span>
-            </span>
+            </span> */}
             <Timer
               projectSavedTime={this.props.projectSavedTime}
               isUserOwner={this.props.isUserOwner}
