@@ -19,6 +19,9 @@ body, input, textarea, button {
 .root-app, .app {
 	min-height: 100%;
 	height: 100%;
+	@include themify() {
+		background: getThemifyVariable('background-color');
+	}
 }
 
 a {
