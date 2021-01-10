@@ -12,7 +12,7 @@ import PreviewFrame from '../components/PreviewFrame';
 import Toolbar from '../components/Toolbar';
 import Preferences from '../components/Preferences/index';
 import NewFileModal from '../components/NewFileModal';
-import NewFolderModal from '../components/NewFolderModal';
+// import NewFolderModal from '../components/NewFolderModal';
 // import UploadFileModal from '../components/UploadFileModal';
 import ShareModal from '../components/ShareModal';
 import KeyboardShortcutModal from '../components/KeyboardShortcutModal';
@@ -223,15 +223,16 @@ class IDEView extends React.Component {
       } else {
         this.props.expandConsole();
       }
-    } else if (e.keyCode === 27) {
-      if (this.props.ide.newFolderModalVisible) {
-        this.props.closeNewFolderModal();
-      // } else if (this.props.ide.uploadFileModalVisible) {
-      //   this.props.closeUploadFileModal();
-      } else if (this.props.ide.modalIsVisible) {
-        this.props.closeNewFileModal();
-      }
     }
+    // else if (e.keyCode === 27) {
+    //   if (this.props.ide.newFolderModalVisible) {
+    //     this.props.closeNewFolderModal();
+    //   } else if (this.props.ide.uploadFileModalVisible) {
+    //     this.props.closeUploadFileModal();
+    //   } else if (this.props.ide.modalIsVisible) {
+    //     this.props.closeNewFileModal();
+    //   }
+    // }
   }
 
   handleUnsavedChanges = nextLocation => warnIfUnsavedChanges(this.props, nextLocation);
@@ -366,12 +367,12 @@ class IDEView extends React.Component {
           </SplitPane>
         </main>
         {this.props.ide.modalIsVisible && <NewFileModal />}
-        {this.props.ide.newFolderModalVisible && (
+        {/* {this.props.ide.newFolderModalVisible && (
           <NewFolderModal
             closeModal={this.props.closeNewFolderModal}
             createFolder={this.props.createFolder}
           />
-        )}
+        )} */}
         {/* {this.props.ide.uploadFileModalVisible && (
           <UploadFileModal closeModal={this.props.closeUploadFileModal} />
         )} */}
@@ -478,7 +479,7 @@ IDEView.propTypes = {
     preferencesIsVisible: PropTypes.bool.isRequired,
     modalIsVisible: PropTypes.bool.isRequired,
     // uploadFileModalVisible: PropTypes.bool.isRequired,
-    newFolderModalVisible: PropTypes.bool.isRequired,
+    // newFolderModalVisible: PropTypes.bool.isRequired,
     justOpenedProject: PropTypes.bool.isRequired,
     sidebarIsExpanded: PropTypes.bool.isRequired,
     consoleIsExpanded: PropTypes.bool.isRequired,
@@ -549,9 +550,9 @@ IDEView.propTypes = {
   openProjectOptions: PropTypes.func.isRequired,
   closeProjectOptions: PropTypes.func.isRequired,
   newFolder: PropTypes.func.isRequired,
-  closeNewFolderModal: PropTypes.func.isRequired,
-  closeNewFileModal: PropTypes.func.isRequired,
-  createFolder: PropTypes.func.isRequired,
+  // closeNewFolderModal: PropTypes.func.isRequired,
+  // closeNewFileModal: PropTypes.func.isRequired,
+  // createFolder: PropTypes.func.isRequired,
   closeShareModal: PropTypes.func.isRequired,
   closeKeyboardShortcutModal: PropTypes.func.isRequired,
   toast: PropTypes.shape({

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import CodeMirror from 'codemirror';
-import beautifyJS from 'js-beautify';
+// import beautifyJS from 'js-beautify';
 import { withTranslation } from 'react-i18next';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/python/python';
@@ -125,7 +125,7 @@ class Editor extends React.Component {
 
     delete this._cm.options.lint.options.errors;
 
-    const replaceCommand = metaKey === 'Ctrl' ? `${metaKey}-H` : `${metaKey}-Option-F`;
+    // const replaceCommand = metaKey === 'Ctrl' ? `${metaKey}-H` : `${metaKey}-Option-F`;
     this._cm.setOption('extraKeys', {
       Tab: (cm) => {
         // might need to specify and indent more?
