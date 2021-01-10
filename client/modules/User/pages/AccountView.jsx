@@ -16,39 +16,11 @@ import ErrorModal from '../../IDE/components/ErrorModal';
 import Overlay from '../../App/components/Overlay';
 import Toast from '../../IDE/components/Toast';
 
-function SocialLoginPanel(props) {
-  const { user } = props;
+function SocialLoginPanel() {
   return (
-    <React.Fragment>
-      <AccountForm />
-      {/* eslint-disable-next-line react/prop-types */}
-      <h2 className="form-container__divider">{props.t('AccountView.SocialLogin')}</h2>
-      <p className="account__social-text">
-        {/* eslint-disable-next-line react/prop-types */}
-        {props.t('AccountView.SocialLoginDescription')}
-      </p>
-      <div className="account__social-stack">
-        <SocialAuthButton
-          service={SocialAuthButton.services.github}
-          linkStyle
-          isConnected={!!user.github}
-        />
-        <SocialAuthButton
-          service={SocialAuthButton.services.google}
-          linkStyle
-          isConnected={!!user.google}
-        />
-      </div>
-    </React.Fragment>
+    <AccountForm />
   );
 }
-
-SocialLoginPanel.propTypes = {
-  user: PropTypes.shape({
-    github: PropTypes.string,
-    google: PropTypes.string
-  }).isRequired
-};
 
 class AccountView extends React.Component {
   componentDidMount() {
