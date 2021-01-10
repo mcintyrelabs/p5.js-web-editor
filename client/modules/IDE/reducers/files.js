@@ -13,10 +13,12 @@ const defaultHTML =
 `<!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="pyp5.js"></script>    
+    <script src="p5.computiful.js"></script>
+    <script src="pyp5.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
   </head>
@@ -35,6 +37,65 @@ const defaultCSS =
 canvas {
   display: block;
 }
+`;
+
+const p5computiful =
+`/**
+* By default, p5 uses a left-handed coordinate system with the origin placed
+* at the top-left corner of the canvas. This library overrides p5's default
+* behavior, creating a right-handed coordinate system with the origin placed
+* at the bottom-left corner of the canvas.
+* 
+* In other words, the canvas is now Quadrant I from math class.
+*/
+p5.prototype.RIGHT_HAND = 'right-hand';
+p5.prototype.LEFT_HAND = 'left-hand';
+p5.prototype._coordinateMode = p5.prototype.RIGHT_HAND;
+
+
+/**
+* Transforms the coordinate system based on the current coordinateMode.
+*/
+p5.prototype._toRightHand = function setCoordinateSystemToRightHanded() {
+ if (this._coordinateMode === this.RIGHT_HAND) {
+   this.scale(1, -1);
+   this.translate(0, -this.height);
+ }
+};
+
+
+/**
+* Transforms the coordinate system before draw() is called.
+*/
+p5.prototype.registerMethod('pre', p5.prototype._toRightHand);
+
+
+/**
+* Sets the coordinate system mode to either left-handed or right-handed.
+* 
+* @param {Constant} mode either LEFT_HAND or RIGHT_HAND
+*/
+p5.prototype.coordinateMode = function setCoordinateMode(mode) {
+ if (mode === this.LEFT_HAND || mode === this.RIGHT_HAND) {
+   p5.prototype._coordinateMode = mode;
+ }
+};
+
+/**
+ * Set the default angleMode to degrees.
+ */
+p5.prototype._angleMode = p5.prototype.DEGREES;
+
+/**
+ * Creates a wrapper function to simplify constructing p5.Oscillator objects.
+ * 
+ * @param {Number} freq defaults to 440Hz (Optional)
+ * @param {String} type type of oscillator. Options: 'sine' (default),
+ *                      'triangle', 'sawtooth', 'square' (Optional)
+ */
+p5.prototype.createOscillator = function createP5Oscillator(freq, type) {
+  return new p5.Oscillator(freq, type);
+};
 `;
 
 const pyp5jsLicense =
@@ -110,6 +171,7 @@ ITALIC = None
 LANDSCAPE = None
 LEFT = None
 LEFT_ARROW = None
+LEFT_HAND = None
 LIGHTEST = None
 LINE_LOOP = None
 LINE_STRIP = None
@@ -144,6 +206,7 @@ RETURN = None
 RGB = None
 RIGHT = None
 RIGHT_ARROW = None
+RIGHT_HAND = None
 ROUND = None
 SCREEN = None
 SHIFT = None
@@ -429,6 +492,10 @@ def noLoop(*args):
 
 def loop(*args):
     return _P5_INSTANCE.loop(*args)
+
+
+def coordinateMode(*args):
+    return _P5_INSTANCE.coordinateMode(*args)
 
 def push(*args):
     return _P5_INSTANCE.push(*args)
@@ -823,8 +890,13 @@ def textDescent(*args):
 def loadFont(*args):
     return _P5_INSTANCE.loadFont(*args)
 
-def text(*args):
-    return _P5_INSTANCE.text(*args)
+def text(txt, x, y, *args):
+    _P5_INSTANCE.push()
+    if _P5_INSTANCE._coordinateMode == _P5_INSTANCE.RIGHT_HAND:
+        _P5_INSTANCE.scale(1, -1)
+        _P5_INSTANCE.translate(0, -0.5 * _P5_INSTANCE.height)
+    _P5_INSTANCE.text(txt, x, y, *args)
+    _P5_INSTANCE.pop()
 
 def textFont(*args):
     return _P5_INSTANCE.textFont(*args)
@@ -973,6 +1045,8 @@ def createCanvas(*args):
 
     return canvas
 
+def createOscillator(*args):
+    return _P5_INSTANCE.createOscillator(*args)
 
 def pop(*args):
     p5_pop = _P5_INSTANCE.pop(*args)
@@ -996,9 +1070,9 @@ def pre_draw(p5_instance, draw_func):
     global BOTTOM, BURN, CENTER, CHORD, CLAMP, CLOSE, CONTROL, CORNER, CORNERS, CROSS, CURVE, DARKEST
     global DEG_TO_RAD, DEGREES, DELETE, DIFFERENCE, DILATE, DODGE, DOWN_ARROW, ENTER, ERODE, ESCAPE, EXCLUSION
     global FILL, GRAY, GRID, HALF_PI, HAND, HARD_LIGHT, HSB, HSL, IMAGE, IMMEDIATE, INVERT, ITALIC, LANDSCAPE
-    global LEFT, LEFT_ARROW, LIGHTEST, LINE_LOOP, LINE_STRIP, LINEAR, LINES, MIRROR, MITER, MOVE, MULTIPLY, NEAREST
+    global LEFT, LEFT_ARROW, LEFT_HAND, LIGHTEST, LINE_LOOP, LINE_STRIP, LINEAR, LINES, MIRROR, MITER, MOVE, MULTIPLY, NEAREST
     global NORMAL, OPAQUE, OPEN, OPTION, OVERLAY, P2D, PI, PIE, POINTS, PORTRAIT, POSTERIZE, PROJECT, QUAD_STRIP, QUADRATIC
-    global QUADS, QUARTER_PI, RAD_TO_DEG, RADIANS, RADIUS, REPEAT, REPLACE, RETURN, RGB, RIGHT, RIGHT_ARROW
+    global QUADS, QUARTER_PI, RAD_TO_DEG, RADIANS, RADIUS, REPEAT, REPLACE, RETURN, RGB, RIGHT, RIGHT_ARROW, RIGHT_HAND
     global ROUND, SCREEN, SHIFT, SOFT_LIGHT, SQUARE, STROKE, SUBTRACT, TAB, TAU, TEXT, TEXTURE, THRESHOLD, TOP
     global TRIANGLE_FAN, TRIANGLE_STRIP, TRIANGLES, TWO_PI, UP_ARROW, VIDEO, WAIT, WEBGL
 
@@ -1067,6 +1141,7 @@ def pre_draw(p5_instance, draw_func):
     LANDSCAPE = p5_instance.LANDSCAPE
     LEFT = p5_instance.LEFT
     LEFT_ARROW = p5_instance.LEFT_ARROW
+    LEFT_HAND = p5_instance.LEFT_HAND
     LIGHTEST = p5_instance.LIGHTEST
     LINE_LOOP = p5_instance.LINE_LOOP
     LINE_STRIP = p5_instance.LINE_STRIP
@@ -1103,6 +1178,7 @@ def pre_draw(p5_instance, draw_func):
     RGB = p5_instance.RGB
     RIGHT = p5_instance.RIGHT
     RIGHT_ARROW = p5_instance.RIGHT_ARROW
+    RIGHT_HAND = p5_instance.RIGHT_HAND
     ROUND = p5_instance.ROUND
     SCREEN = p5_instance.SCREEN
     SHIFT = p5_instance.SHIFT
@@ -1151,13 +1227,18 @@ def pre_draw(p5_instance, draw_func):
     key = p5_instance.key
     keyCode = p5_instance.keyCode
     mouseX = p5_instance.mouseX
-    mouseY = p5_instance.mouseY
-    pmouseX = p5_instance.pmouseX
-    pmouseY = p5_instance.pmouseY
     winMouseX = p5_instance.winMouseX
-    winMouseY = p5_instance.winMouseY
     pwinMouseX = p5_instance.pwinMouseX
-    pwinMouseY = p5_instance.pwinMouseY
+    if p5_instance._coordinateMode == p5_instance.RIGHT_HAND:
+        mouseY = height - p5_instance.mouseY
+        winMouseY = height - p5_instance.winMouseY
+        pmouseY = height - p5_instance.pmouseY
+        pwinMouseY = height - p5_instance.pwinMouseY
+    else:
+        mouseY = p5_instance.mouseY
+        winMouseY = p5_instance.winMouseY
+        pmouseY = p5_instance.pmouseY
+        pwinMouseY = p5_instance.pwinMouseY
     mouseButton = p5_instance.mouseButton
     mouseIsPressed = p5_instance.mouseIsPressed
     touches = p5_instance.touches
@@ -1265,13 +1346,14 @@ const initialState = () => {
   const b = objectID().toHexString();
   const c = objectID().toHexString();
   const d = objectID().toHexString();
+  const e = objectID().toHexString();
   const r = objectID().toHexString();
   return [
     {
       name: 'root',
       id: r,
       _id: r,
-      children: [b, a, c, d],
+      children: [b, a, c, d, e],
       fileType: 'folder',
       content: ''
     },
@@ -1305,6 +1387,14 @@ const initialState = () => {
       content: pyp5js,
       id: d,
       _id: d,
+      fileType: 'file',
+      children: []
+    },
+    {
+      name: 'p5.computiful.js',
+      content: p5computiful,
+      id: e,
+      _id: e,
       fileType: 'file',
       children: []
     }];
