@@ -65,7 +65,7 @@ const userSchema = new Schema({
     textOutput: { type: Boolean, default: false },
     gridOutput: { type: Boolean, default: false },
     soundOutput: { type: Boolean, default: false },
-    theme: { type: String, default: 'light' },
+    theme: { type: String, default: 'dark' },
     autorefresh: { type: Boolean, default: false },
     language: { type: String, default: 'en-US' },
     autocloseBracketsQuotes: { type: Boolean, default: true }

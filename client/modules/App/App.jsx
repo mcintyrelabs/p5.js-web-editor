@@ -65,7 +65,7 @@ App.propTypes = {
 App.defaultProps = {
   children: null,
   language: null,
-  theme: 'light'
+  theme: 'dark'
 };
 
 const mapStateToProps = state => ({
