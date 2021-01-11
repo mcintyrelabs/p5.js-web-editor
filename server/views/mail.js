@@ -5,7 +5,7 @@ import consolidationMailLayout from './consolidationMailLayout';
 export const renderAccountConsolidation = (data) => {
   const subject = 'Computiful Editor Account Consolidation';
   const templateOptions = {
-    domain: data.body.domain,
+    domain: 'https://editor.computiful.org',
     headingText: 'Account Consolidation',
     greetingText: 'Hello,',
     messageText: `You're receiving this message because you previous registered for the
@@ -24,7 +24,7 @@ export const renderAccountConsolidation = (data) => {
               Computiful Editor!`,
     meta: {
       keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
-      description: 'A simple code editor for math students.'
+      description: 'A simple coding platform for math students.'
     }
   };
 
@@ -45,7 +45,7 @@ export const renderAccountConsolidation = (data) => {
 export const renderResetPassword = (data) => {
   const subject = 'Computiful Editor Password Reset';
   const templateOptions = {
-    domain: data.body.domain,
+    domain: 'https://editor.computiful.org',
     headingText: 'Reset your password',
     greetingText: 'Hello,',
     messageText: 'We received a request to reset the password for your account. To reset your password, click on the button below:', // eslint-disable-line max-len
@@ -55,7 +55,7 @@ export const renderResetPassword = (data) => {
     noteText: 'If you did not request this, please ignore this email and your password will remain unchanged. Thanks for using the Computiful Editor!', // eslint-disable-line max-len
     meta: {
       keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
-      description: 'A simple code editor for for math students.'
+      description: 'A simple coding platform for for math students.'
     }
   };
 
@@ -74,9 +74,9 @@ export const renderResetPassword = (data) => {
 };
 
 export const renderEmailConfirmation = (data) => {
-  const subject = 'p5.js Email Verification';
+  const subject = 'Computiful Email Verification';
   const templateOptions = {
-    domain: data.body.domain,
+    domain: 'https://editor.computiful.org',
     headingText: 'Email Verification',
     greetingText: 'Hello,',
     messageText: 'To verify your email, click on the button below:',
@@ -86,7 +86,7 @@ export const renderEmailConfirmation = (data) => {
     noteText: 'This link is only valid for the next 24 hours. Thanks for using the Computiful Editor!',
     meta: {
       keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
-      description: 'A simple code editor for for math students.'
+      description: 'A simple coding platform for for math students.'
     }
   };
 

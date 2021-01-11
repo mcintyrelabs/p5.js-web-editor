@@ -21,8 +21,8 @@ export default ({
     <mj-container>
       <mj-section>
         <mj-column>
-          <mj-image width="192" src="${domain}/images/p5js-square-logo.png" alt="p5.js" />
-          <mj-divider border-color="#ed225d"></mj-divider>
+          <mj-image width="192" src="${domain}/images/computiful-square-logo.png" alt="computiful" />
+          <mj-divider border-color="#1E90FF"></mj-divider>
         </mj-column>
       </mj-section>
 
@@ -42,7 +42,7 @@ export default ({
           <mj-text color="#333333">
             ${messageText}
           </mj-text>
-          <mj-button background-color="#ed225d" href="${link}">
+          <mj-button background-color="#1E90FF" href="${link}">
             ${buttonText}
           </mj-button>
         </mj-column>

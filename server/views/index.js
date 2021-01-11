@@ -7,7 +7,7 @@ export function renderIndex() {
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords" content="'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor'" />
-      <meta name="description" content="A simple code editor for math students." />
+      <meta name="description" content="A simple coding platform for math students." />
       <title>Computiful Editor</title>
       ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
