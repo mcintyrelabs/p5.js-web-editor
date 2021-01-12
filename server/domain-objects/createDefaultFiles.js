@@ -4,7 +4,7 @@ const defaultSketch = `def setup():
 
 def draw():
   background(220)
-`;
+  `;
 
 const defaultHTML =
 `<!DOCTYPE html>
