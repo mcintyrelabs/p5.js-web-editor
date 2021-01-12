@@ -106,7 +106,7 @@ class Toolbar extends React.Component {
         >
           <StopIcon focusable="false" aria-hidden="true" />
         </button>
-        <div className="toolbar__autorefresh">
+        {/* <div className="toolbar__autorefresh">
           <input
             id="autorefresh"
             className="checkbox__autorefresh"
@@ -119,7 +119,7 @@ class Toolbar extends React.Component {
           <label htmlFor="autorefresh" className="toolbar__autorefresh-label">
             {this.props.t('Toolbar.Auto-refresh')}
           </label>
-        </div>
+        </div> */}
         <div className={nameContainerClass}>
           <button
             className="toolbar__project-name"
@@ -192,8 +192,8 @@ Toolbar.propTypes = {
   showEditProjectName: PropTypes.func.isRequired,
   hideEditProjectName: PropTypes.func.isRequired,
   infiniteLoop: PropTypes.bool.isRequired,
-  autorefresh: PropTypes.bool.isRequired,
-  setAutorefresh: PropTypes.func.isRequired,
+  // autorefresh: PropTypes.bool.isRequired,
+  // setAutorefresh: PropTypes.func.isRequired,
   setTextOutput: PropTypes.func.isRequired,
   setGridOutput: PropTypes.func.isRequired,
   startSketch: PropTypes.func.isRequired,
