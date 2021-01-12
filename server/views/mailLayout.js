@@ -21,7 +21,7 @@ export default ({
     <mj-container>
       <mj-section>
         <mj-column>
-          <mj-image width="192" src="${domain}/images/computiful-square-logo.png" alt="computiful" />
+          <mj-image width="192" src="${domain}/images/computiful-square-logo.png" alt="Computiful" />
           <mj-divider border-color="#1E90FF"></mj-divider>
         </mj-column>
       </mj-section>
