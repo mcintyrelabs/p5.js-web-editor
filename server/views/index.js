@@ -13,6 +13,7 @@ export function renderIndex() {
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
       <link rel='shortcut icon' href='https://computiful.org/assets/images/logo/favicon.ico' type='image/x-icon' / >
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
       <script>
         if (!window.process) {
           window.process = {};

@@ -15,7 +15,7 @@ const defaultHTML =
   <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="p5.computiful.js"></script>
     <script src="pyp5.js"></script>
@@ -106,12 +106,7 @@ const pyp5jsLicense =
 `;
 
 const p5Wrapper =
-`from browser import document, window
-
-
-p5 = window.p5
-
-_P5_INSTANCE = None
+`_P5_INSTANCE = None
 
 _CTX_MIDDLE = None
 _DEFAULT_FILL = None
@@ -252,7 +247,7 @@ rotationZ = None
 pRotationX = None
 pRotationY = None
 pRotationZ = None
-# turnAxis = None
+turnAxis = None
 keyIsPressed = None
 key = None
 keyCode = None
@@ -1079,7 +1074,7 @@ def pre_draw(p5_instance, draw_func):
     global frameCount, focused, displayWidth, displayHeight, windowWidth, windowHeight, width, height
     global deviceOrientation, accelerationX, accelerationY, accelerationZ
     global pAccelerationX, pAccelerationY, pAccelerationZ, rotationX, rotationY, rotationZ
-    global pRotationX, pRotationY, pRotationZ #, turnAxis, 
+    global pRotationX, pRotationY, pRotationZ, turnAxis
     global keyIsPressed, key, keyCode, mouseX, mouseY, pmouseX, pmouseY
     global winMouseX, winMouseY, pwinMouseX, pwinMouseY, mouseButton, mouseIsPressed, touches, pixels
 
@@ -1222,7 +1217,7 @@ def pre_draw(p5_instance, draw_func):
     pRotationX = p5_instance.pRotationX
     pRotationY = p5_instance.pRotationY
     pRotationZ = p5_instance.pRotationZ
-    # turnAxis = p5_instance.turnAxis
+    turnAxis = p5_instance.turnAxis
     keyIsPressed = p5_instance.keyIsPressed
     key = p5_instance.key
     keyCode = p5_instance.keyCode
@@ -1325,21 +1320,33 @@ def draw():
     pass
 `;
 
-const jqueryWrapper =
-`$(function () {
+const pyodideSetup =
+`import io, code, sys
+from js import pyodide, p5, window, document
+`;
+
+/* eslint-disable */
+const pyodideWrapper =
+`languagePluginLoader.then(() => {
+  pyodide.runPython(${'`\n' + pyodideSetup + '\n`'});
+  runCode(); 
+});
+  
+function runCode() {
   $('#sketch-holder').text('');
-  $.get('sketch.py', (userCode) => {
+  $.get('sketch.py', function (userCode) {
     const code = p5Wrapper + userCode + '\\nstart_p5(setup, draw, {});';
+
     if (window.instance) {
       window.instance.canvas.remove();
     }
-    $('#sketch').html(code);
-    brython(0);
-  }, 'text');
-});
-`;
 
-const pyp5js = pyp5jsLicense + 'const p5Wrapper = \n`' + `${p5Wrapper}` + '\n`;\n\n' + jqueryWrapper; // eslint-disable-line
+    pyodide.runPython(code);
+  }, 'text');
+}`;
+/* eslint-enable */
+
+const pyp5js = pyp5jsLicense + 'const p5Wrapper = \n`' + `${p5Wrapper}` + '\n`;\n\n' + pyodideWrapper; // eslint-disable-line
 
 const initialState = () => {
   const a = objectID().toHexString();
