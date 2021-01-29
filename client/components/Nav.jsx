@@ -536,7 +536,7 @@ class Nav extends React.PureComponent {
             </li>
             {/* <li className="nav__dropdown-item">
               <a
-                href="https://computiful.org/reference/"
+                href="https://reference.computiful.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onFocus={this.handleFocusForHelp}
