@@ -886,11 +886,12 @@ def loadFont(*args):
     return _P5_INSTANCE.loadFont(*args)
 
 def text(txt, x, y, *args):
+    _y = y
     _P5_INSTANCE.push()
     if _P5_INSTANCE._coordinateMode == _P5_INSTANCE.RIGHT_HAND:
         _P5_INSTANCE.scale(1, -1)
-        _P5_INSTANCE.translate(0, -0.5 * _P5_INSTANCE.height)
-    _P5_INSTANCE.text(txt, x, y, *args)
+        _y = -y
+    _P5_INSTANCE.text(txt, x, _y, *args)
     _P5_INSTANCE.pop()
 
 def textFont(*args):
