@@ -52,12 +52,12 @@ function About(props) {
         </p>
         <p className="about__content-column-list">
           <a
-            href="https://github.com/berinhard/pyp5js"
+            href="https://skulpt.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
-            pyp5js
+            Skulpt
           </a>
         </p>
       </div>
