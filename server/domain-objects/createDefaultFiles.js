@@ -7,9 +7,7 @@ def setup():
 
 def draw():
   background(220)
-
-
-run()`;
+  `;
 
 const defaultHTML =
 `<!DOCTYPE html>
@@ -129,7 +127,7 @@ function runCode() {
     Sk.configure({output:outf, read:builtinRead, uncaughtException:uncaught}); 
     Sk.canvas = "sketch-holder";
     const myPromise = Sk.misceval.asyncToPromise(function() {
-        return Sk.importMainWithBody("<stdin>", false, prog, true);
+        return Sk.importMainWithBody("<stdin>", false, prog + '\\nrun()', true);
     });
     myPromise.then(function(mod) {
         console.log(' ');
