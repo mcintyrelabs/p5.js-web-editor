@@ -6,7 +6,6 @@ const defaultSketch = `from p5 import *
 
 def setup():
   createCanvas(400, 400)
-  coordinateMode(RIGHT_HAND)
 
 
 def draw():
@@ -55,7 +54,7 @@ const p5computiful =
 */
 p5.prototype.RIGHT_HAND = 'right-hand';
 p5.prototype.LEFT_HAND = 'left-hand';
-p5.prototype._coordinateMode = p5.prototype.LEFT_HAND;
+p5.prototype._coordinateMode = p5.prototype.RIGHT_HAND;
 
 
 /**
