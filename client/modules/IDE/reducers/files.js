@@ -16,19 +16,19 @@ const defaultHTML =
 `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://assets.computiful.org/pre-alpha/p5.js"></script>
-    <script src="https://assets.computiful.org/pre-alpha/p5.sound.js"></script>
-    <script src="https://assets.computiful.org/pre-alpha/skulpt.min.js"></script>
-    <script src="https://assets.computiful.org/pre-alpha/skulpt-stdlib.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="p5.computiful.js"></script>
-    <script src="skulptSetup.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+  <script src="https://assets.computiful.org/pre-alpha/p5.js"></script>
+  <script src="https://assets.computiful.org/pre-alpha/p5.sound.js"></script>
+  <script src="https://assets.computiful.org/pre-alpha/skulpt.min.js"></script>
+  <script src="https://assets.computiful.org/pre-alpha/skulpt-stdlib.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="p5.computiful.js"></script>
+  <script src="skulptSetup.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
 </head>
 <body>
-    <pre id="output"></pre>
-    <div id="sketch-holder"></div>
+  <pre id="output" style="display: none;"></pre>
+  <div id="sketch-holder"></div>
 </body>
 </html>
 `;
