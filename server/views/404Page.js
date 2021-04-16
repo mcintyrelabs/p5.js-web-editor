@@ -18,7 +18,7 @@ function insertErrorMessage(htmlFile) {
         width: 100%;
         z-index: 1;
         background: white;
-        color: #ed225d;
+        color: #1e90ff;
         font-family: Montserrat, sans-serif;
         text-align: center;
         display: table;

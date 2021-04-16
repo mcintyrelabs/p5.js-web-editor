@@ -18,6 +18,8 @@ const defaultHTML =
   <script src="https://assets.computiful.org/pre-alpha/skulpt.min.js"></script>
   <script src="https://assets.computiful.org/pre-alpha/skulpt-stdlib.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js@1.2.0/dist/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
   <script src="p5.computiful.js"></script>
   <script src="skulptSetup.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -96,6 +98,35 @@ p5.prototype._angleMode = p5.prototype.DEGREES;
  */
 p5.prototype.createOscillator = function createP5Oscillator(freq, type) {
   return new p5.Oscillator(freq, type);
+};
+
+// Wrap the Danfo.js library.
+p5.prototype.dfd = dfd;
+
+/**
+ * Creates a wrapper function to simplify constructing Series objects.
+ **/
+p5.prototype.createSeries = function _createSeries() {
+  return new this.dfd.Series(...arguments);
+};
+
+/**
+ * Creates a wrapper function to simplify constructing DataFrame objects.
+ **/
+p5.prototype.createDataFrame = function _createDataFrame() {
+  return new this.dfd.DataFrame(...arguments);
+};
+
+
+/**
+ * Reads the contents of a file or URL and creates a DataFrame object with its values.
+ **/
+p5.prototype.loadDataFrame = function _loadDataFrame(filename, extension, callback, errorCallback) {
+  if (extension === 'csv') {
+      this.dfd.read_csv(filename)
+        .then(callback)
+        .catch(errorCallback);
+  }
 };
 `;
 

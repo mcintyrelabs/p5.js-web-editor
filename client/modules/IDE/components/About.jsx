@@ -27,6 +27,16 @@ function About(props) {
             Textbook
           </a>
         </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://github.com/mcintyrelabs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <NablaIcon className="about__content-column-asterisk" aria-hidden="true" focusable="false" />
+            Source Code
+          </a>
+        </p>
       </div>
       <div className="about__content-column">
         <h3 className="about__content-column-title">Credits</h3>
