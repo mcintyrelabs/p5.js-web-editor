@@ -21,8 +21,7 @@ const defaultHTML =
   <script src="https://assets.computiful.org/pre-alpha/skulpt.min.js"></script>
   <script src="https://assets.computiful.org/pre-alpha/skulpt-stdlib.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/plotly.js@1.2.0/dist/plotly.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ml5@0.6.1/dist/ml5.min.js" integrity="sha256-dCBjcqq8kDv0BJiL7vsZsCbRsM+Xi8b0ufvLxTyPC08=" crossorigin="anonymous"></script>
   <script src="p5.computiful.js"></script>
   <script src="skulptSetup.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -62,7 +61,7 @@ p5.prototype._coordinateMode = p5.prototype.RIGHT_HAND;
 /**
 * Transforms the coordinate system based on the current coordinateMode.
 */
-p5.prototype._toRightHand = function setCoordinateSystemToRightHanded() {
+p5.prototype._toRightHand = function _toRightHand() {
  if (this._coordinateMode === this.RIGHT_HAND) {
    this.scale(1, -1);
    this.translate(0, -this.height);
@@ -81,7 +80,7 @@ p5.prototype.registerMethod('pre', p5.prototype._toRightHand);
 * 
 * @param {Constant} mode either LEFT_HAND or RIGHT_HAND
 */
-p5.prototype.coordinateMode = function setCoordinateMode(mode) {
+p5.prototype.coordinateMode = function _coordinateMode(mode) {
  if (mode === this.LEFT_HAND || mode === this.RIGHT_HAND) {
    p5.prototype._coordinateMode = mode;
  }
@@ -99,38 +98,12 @@ p5.prototype._angleMode = p5.prototype.DEGREES;
  * @param {String} type type of oscillator. Options: 'sine' (default),
  *                      'triangle', 'sawtooth', 'square' (Optional)
  */
-p5.prototype.createOscillator = function createP5Oscillator(freq, type) {
+p5.prototype.createOscillator = function _createOscillator(freq, type) {
   return new p5.Oscillator(freq, type);
 };
 
-// Wrap the Danfo.js library.
-p5.prototype.dfd = dfd;
-
-/**
- * Creates a wrapper function to simplify constructing Series objects.
- **/
-p5.prototype.createSeries = function _createSeries() {
-  return new this.dfd.Series(...arguments);
-};
-
-/**
- * Creates a wrapper function to simplify constructing DataFrame objects.
- **/
-p5.prototype.createDataFrame = function _createDataFrame() {
-  return new this.dfd.DataFrame(...arguments);
-};
-
-
-/**
- * Reads the contents of a file or URL and creates a DataFrame object with its values.
- **/
-p5.prototype.loadDataFrame = function _loadDataFrame(filename, extension, callback, errorCallback) {
-  if (extension === 'csv') {
-      this.dfd.read_csv(filename)
-        .then(callback)
-        .catch(errorCallback);
-  }
-};
+// Wrap the ml5.js library.
+p5.prototype.ml5 = ml5;
 `;
 
 /* eslint-disable */
