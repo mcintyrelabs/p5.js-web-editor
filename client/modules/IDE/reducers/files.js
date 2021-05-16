@@ -18,10 +18,10 @@ const defaultHTML =
 <head>
   <script src="https://assets.computiful.org/pre-alpha/p5.js"></script>
   <script src="https://assets.computiful.org/pre-alpha/p5.sound.js"></script>
+  <script src="https://assets.computiful.org/pre-alpha/numero.js"></script>
   <script src="https://assets.computiful.org/pre-alpha/skulpt.min.js"></script>
   <script src="https://assets.computiful.org/pre-alpha/skulpt-stdlib.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ml5@0.6.1/dist/ml5.min.js" integrity="sha256-dCBjcqq8kDv0BJiL7vsZsCbRsM+Xi8b0ufvLxTyPC08=" crossorigin="anonymous"></script>
   <script src="p5.computiful.js"></script>
   <script src="skulptSetup.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -104,6 +104,9 @@ p5.prototype.createOscillator = function _createOscillator(freq, type) {
 
 // Wrap the ml5.js library.
 p5.prototype.ml5 = ml5;
+
+// Wrap the numero library.
+p5.prototype.num = num;
 `;
 
 /* eslint-disable */

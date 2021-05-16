@@ -3,7 +3,7 @@
   "description": "The Computiful Editor is a simple coding platform for math students.",
   "repository": "https://github.com/processing/p5.js-web-editor",
   "logo": "https://p5js.org/assets/img/p5js.svg",
-  "keywords": ["processing", "p5js", "p5.js", "computiful"],
+  "keywords": ["computiful", "computiful editor", "math", "p5.js", "processing", "python"],
   "addons": [
     {
       "plan": "mailgun:starter",

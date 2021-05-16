@@ -6,13 +6,14 @@ export function renderIndex() {
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor'" />
+      <meta name="keywords" content="'computiful, computiful editor, math, p5.js, processing, python'" />
       <meta name="description" content="A simple coding platform for math students." />
       <title>Computiful Editor</title>
       ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
       <link rel='shortcut icon' href='https://computiful.org/assets/images/logo/favicon.ico' type='image/x-icon' / >
+      <script src="https://assets.computiful.org/pre-alpha/numero.js"></script>
       <script>
         if (!window.process) {
           window.process = {};

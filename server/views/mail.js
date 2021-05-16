@@ -23,7 +23,7 @@ export const renderAccountConsolidation = (data) => {
     noteText: `We are grateful for your patience and understanding. Thank you for supporting p5.js and the
               Computiful Editor!`,
     meta: {
-      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      keywords: 'computiful, computiful editor, math, p5.js, processing, python',
       description: 'A simple coding platform for math students.'
     }
   };
@@ -54,7 +54,7 @@ export const renderResetPassword = (data) => {
     directLinkText: 'Or copy and paste the URL into your browser:',
     noteText: 'If you did not request this, please ignore this email and your password will remain unchanged. Thanks for using the Computiful Editor!', // eslint-disable-line max-len
     meta: {
-      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      keywords: 'computiful, computiful editor, math, p5.js, processing, python',
       description: 'A simple coding platform for for math students.'
     }
   };
@@ -85,7 +85,7 @@ export const renderEmailConfirmation = (data) => {
     directLinkText: 'Or copy and paste the URL into your browser:',
     noteText: 'This link is only valid for the next 24 hours. Thanks for using the Computiful Editor!',
     meta: {
-      keywords: 'p5.js, computiful, computiful editor, math, processing, python, numpy, code editor',
+      keywords: 'computiful, computiful editor, math, p5.js, processing, python',
       description: 'A simple coding platform for for math students.'
     }
   };

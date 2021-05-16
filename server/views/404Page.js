@@ -8,7 +8,7 @@ function insertErrorMessage(htmlFile) {
     ${html[0]}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="p5.js, computiful, computiful editor, math, processing, python, numpy, code editor" />
+    <meta name="keywords" content="computiful, computiful editor, math, p5.js, processing, python" />
     <meta name="description" content="${metaDescription}" />
     <title>404 Page Not Found - Computiful Editor</title>
     <style>
